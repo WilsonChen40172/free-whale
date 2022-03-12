@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import "./Home.scss";
+import "./Navbar.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faList } from '@fortawesome/free-solid-svg-icons'
-import Navbar from "../conponents/Navbar";
 
-const Home = (props) => {
+const Navbar = (props) => {
     const [count, setCount] = useState(props.value);
     useEffect(() => {
         //did mount
@@ -16,17 +14,14 @@ const Home = (props) => {
             console.log(props);
         }
     }, [props.value])
-    
+
     return (
-        <div className="Home">
-            <Navbar></Navbar>
-            <div className="section">
-                <Button onClick={() => setCount(count + 1)}>頂{count}次屁屁</Button>
-            </div>
-            <div className="section">
+        <div className="navbar">
+            <div className="dots">
+                <FontAwesomeIcon icon={faList} className="cursor-pointer fs-3" />
             </div>
         </div>
     );
 }
 
-export default Home;
+export default Navbar;

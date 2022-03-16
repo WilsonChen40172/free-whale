@@ -6,9 +6,9 @@ import Navbar from "../conponents/Navbar";
 const Home = (props) => {
   const [number, setNumber] = useState(props.number);
 
-  const valueMinus = () => {
-    setNumber(number - 1);
-  };
+  // const valueMinus = () => {
+  //   setNumber(number - 1);
+  // };
 
   useEffect(() => {
     //did mount
@@ -26,7 +26,7 @@ const Home = (props) => {
         <Button onClick={() => setNumber(number + 1)}>
           +
         </Button>
-        <Button onClick={() => valueMinus()}>
+        <Button onClick={() => setNumber(number - 1)}>
           -
         </Button>
       </div>

@@ -6,12 +6,24 @@ const Header = () => {
       <div className="container d-flex">
         <img src={logo} alt="" className="logo" />
         <ul className="d-flex justify-content-between align-items-center">
-          <li>首頁</li>
-          <li>F2E</li>
-          <li>股票</li>
-          <li>舞蹈</li>
-          <li>健身</li>
-          <li>滑板</li>
+          <li>
+            <a href="/">首頁</a>
+          </li>
+          <li>
+            <a href="/">F2E</a>
+          </li>
+          <li>
+            <a href="/stock">股票</a>
+          </li>
+          <li>
+            <a href="/">舞蹈</a>
+          </li>
+          <li>
+            <a href="/">健身</a>
+          </li>
+          <li>
+            <a href="/">滑板</a>
+          </li>
         </ul>
       </div>
     </div>

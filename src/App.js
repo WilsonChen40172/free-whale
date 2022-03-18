@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 import Navbar from "./conponents/Navbar"
 import Header from "./conponents/Header"
 import RouteSetting from './router/RouteSetting';

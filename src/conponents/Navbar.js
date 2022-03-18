@@ -3,9 +3,9 @@ import "./Navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = () => { 
+const Navbar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar" style={{ display: "none" }}>
       <div className="dots">
         <FontAwesomeIcon icon={faList} className="cursor-pointer fs-3" />
       </div>

@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
-import "./Home.scss";
-import Navbar from "../conponents/Navbar";
 
-const Home = (props) => {
-  const [number, setNumber] = useState(props.number);
-
-  // const valueMinus = () => {
-  //   setNumber(number - 1);
-  // };
-
+const Home = () => {
   useEffect(() => {
     //did mount
-    
+
     return () => {
       //will mount
     };
@@ -20,17 +11,19 @@ const Home = (props) => {
 
   return (
     <div className="Home">
-      <Navbar></Navbar>
       <div className="section">
-          <p>我是{number}</p>
-        <Button onClick={() => setNumber(number + 1)}>
-          +
-        </Button>
-        <Button onClick={() => setNumber(number - 1)}>
-          -
-        </Button>
+        <div className="imgWall">
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
       </div>
-      <div className="section"></div>
+      <div className="section">
+        <div className="container">
+          <p className="title py-2">標題</p>
+        </div>
+      </div>
     </div>
   );
 };

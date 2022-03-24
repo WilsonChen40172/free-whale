@@ -1,5 +1,5 @@
 import logo from "../images/logo.png";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
@@ -7,22 +7,22 @@ const Header = () => {
         <img src={logo} alt="" className="logo" />
         <ul className="d-flex justify-content-between align-items-center">
           <li>
-            <a href="/">首頁</a>
+            <Link to={"/"}>首頁</Link>
           </li>
           <li>
-            <a href="/">F2E</a>
+            {/* <a href="/">F2E</a> */}
           </li>
           <li>
-            <a href="/stock">股票</a>
+            <Link to={"/stock"}>Stock</Link>
           </li>
           <li>
-            <a href="/">舞蹈</a>
+            {/* <a href="/">舞蹈</a> */}
           </li>
           <li>
-            <a href="/">健身</a>
+            {/* <a href="/">健身</a> */}
           </li>
           <li>
-            <a href="/">滑板</a>
+            {/* <a href="/">滑板</a> */}
           </li>
         </ul>
       </div>

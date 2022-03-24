@@ -1,13 +1,14 @@
-$myGreen: rgb(84, 233, 106);
-$myGray: #6f7a89;
+$mySpotlight: #f5bc04;
+$myBackground: #fff;
+$myFont: #222;
 
 .cursor-pointer {
   cursor: pointer;
 }
 
 .App {
-  background-color: $myGray;
-  color: #fff;
+  background-color: $myBackground;
+  color: $myFont;
   padding-top: 60px;
 }
 
@@ -20,14 +21,13 @@ $myGray: #6f7a89;
 
 .header {
   margin: 0;
-  box-shadow: 0px 6px 6px -5px #666;
   padding: 0.5rem;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:9999;
-  width:100%;
-  background-color: $myGray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #f7f7f7;
   ul {
     width: 780px;
     margin: 0;
@@ -38,21 +38,15 @@ $myGray: #6f7a89;
       a {
         width: 100%;
         text-decoration: none;
-        color: #ccc;
+        color: $myFont;
         transition: 0.3s all;
       }
     }
     li:hover {
       a {
-        color: $myGreen;
+        color: $mySpotlight;
       }
     }
-  }
-}
-
-.stock {
-  .title {
-    margin: 0;
   }
 }
 
@@ -67,4 +61,12 @@ $myGray: #6f7a89;
   height: 80vh;
   margin: 0;
   padding: 1rem;
+}
+
+.title {
+  font-size: 24px;
+  border-bottom: 1px solid #777;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }

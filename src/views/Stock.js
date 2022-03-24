@@ -17,11 +17,10 @@ const Stock = () => {
   return (
     <div className="stock container">
       <div class="row">
-        <div class="col">黃金分割率</div>
-        <div class="col">退休金計算</div>
-        <div class="col">Column</div>
+        <div class="col"></div>
       </div>
       <div id="gold" className="section">
+        <p className="title">黃金分割率</p>
         <div className="inputBox">
           <div className="input-group">
             <div class="input-group-prepend">

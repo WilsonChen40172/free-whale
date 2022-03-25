@@ -30,7 +30,7 @@ const Stock = () => {
       console.log(howYear);
       console.log(index);
       console.log(returnValue);
-      returnValue += howMoney * (howPercent ^ howYear);
+      returnValue += howMoney * Math.pow(howPercent, howYear);
     }
     return returnValue;
   };

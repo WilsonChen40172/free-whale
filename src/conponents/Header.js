@@ -10,20 +10,14 @@ const Header = () => {
             <Link to={"/"}>首頁</Link>
           </li>
           <li>
-            {/* <a href="/">F2E</a> */}
+            <Link to={"/F2E"}>F2E</Link>
           </li>
           <li>
             <Link to={"/stock"}>Stock</Link>
           </li>
-          <li>
-            {/* <a href="/">舞蹈</a> */}
-          </li>
-          <li>
-            {/* <a href="/">健身</a> */}
-          </li>
-          <li>
-            {/* <a href="/">滑板</a> */}
-          </li>
+          <li>{/* <a href="/">舞蹈</a> */}</li>
+          <li>{/* <a href="/">健身</a> */}</li>
+          <li>{/* <a href="/">滑板</a> */}</li>
         </ul>
       </div>
     </div>

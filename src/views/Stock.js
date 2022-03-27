@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Stock = () => {
+const Stock = (props) => {
   //最高價
   const [maxNumber, setMaxNumber] = useState(0);
   //最低價
@@ -19,31 +19,33 @@ const Stock = () => {
   //總共可存
   // const [total, setTotal] = useState(0);
 
-  const testFun2 = () => {
-    let returnValue = 0;
-    const howMoney = moneyYear;
-    const howPercent = percentYear / 100 + 1;
-    const howYear = whenYear;
-    for (let index = 0; index < howYear; index++) {
-      console.log(howMoney);
-      console.log(howPercent);
-      console.log(howYear);
-      console.log(index);
-      console.log(returnValue);
-      returnValue += howMoney * Math.pow(howPercent, howYear);
-    }
-    return returnValue;
-  };
-
+  // 相似於 componentDidMount 和 componentDidUpdate:
   useEffect(() => {
-    //did mount
+    // 使用瀏覽器 API 更新文件標題
+    document.title = `股票相關`;
+  });
 
-    return () => {
-      //will mount
-    };
-  }, []);
+  const calculation = () => {
+    //每個月存多少錢
+    let a_year_money = Number(moneyYear);
+    //每年賺多少%數
+    const percentage =
+      1 + Number(percentYear) / 100;
+    //幾年
+    const year = Number(whenYear);
+
+    let total = 0;
+    for (let index = 1; index <= year; index++) {
+      total += a_year_money * Math.pow(percentage, index);
+    }
+    // document.getElementById("pension").innerHTML = total;
+    // document.getElementById("dividends").innerHTML =
+    //   total * Number(document.getElementById("percentage").value / 100);
+    return total;
+  }
 
   return (
+
     <div className="stock container">
       <div id="gold" className="section">
         <p className="title">黃金分割率</p>
@@ -151,7 +153,7 @@ const Stock = () => {
           </div>
           <div className="input-group">
             <span className="p-2">
-              {whenYear}年後可存：{testFun2()}
+              {whenYear}年後可存：{calculation()}
             </span>
           </div>
         </div>

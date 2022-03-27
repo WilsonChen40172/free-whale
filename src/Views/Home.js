@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Home = () => {
+const Home = (props) => {
   useEffect(() => {
     //did mount
 

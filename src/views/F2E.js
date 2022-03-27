@@ -3,11 +3,7 @@ import { Button } from "react-bootstrap";
 
 const F2E = (props) => {
   const [number, setNumber] = useState(props.value);
-
-  const valueMinus = () => {
-    setNumber(number - 1);
-  };
-
+  
   useEffect(() => {
     //did mount
     console.log(props);

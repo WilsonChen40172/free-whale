@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 
-const F2E = (props) => {
-  const [number, setNumber] = useState(props.value);
+const F2E = () => {
+  const [number, setNumber] = useState(0);
   
   useEffect(() => {
     //did mount
-    console.log(props);
     return () => {
       //will mount
     };

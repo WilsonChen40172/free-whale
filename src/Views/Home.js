@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const Home = (props) => {
+const Home = () => {
+  const [img, setImg] = useState(0);
   useEffect(() => {
     //did mount
 
@@ -21,7 +22,8 @@ const Home = (props) => {
       </div>
       <div className="section">
         <div className="container">
-          <p className="title py-2">標題</p>
+          <p className="title py-2">標題{img}</p>
+          <button className="button" onClick={() => setImg(1)}>setImg</button>
         </div>
       </div>
     </div>

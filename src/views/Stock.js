@@ -23,6 +23,7 @@ const Stock = (props) => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = `股票相關`;
+    // console.log(parseFloat(1.4000000000000001.toPrecision(12)) === 1.4);  // True)
   });
 
   const calculation = () => {
@@ -41,7 +42,7 @@ const Stock = (props) => {
     // document.getElementById("pension").innerHTML = total;
     // document.getElementById("dividends").innerHTML =
     //   total * Number(document.getElementById("percentage").value / 100);
-    return total;
+    return parseFloat(total.toPrecision(12));
   }
 
   return (

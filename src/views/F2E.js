@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
-
+import { Counter } from "../features/counter/Counter";
 const F2E = () => {
   const [number, setNumber] = useState(0);
-  
+
   useEffect(() => {
     //did mount
     return () => {
@@ -19,7 +19,9 @@ const F2E = () => {
         <Button onClick={() => setNumber(number + 1)}>+</Button>
         <Button onClick={() => setNumber(number - 1)}>-</Button>
       </div>
-      <div className="section"></div>
+      <div className="section">
+        <Counter />
+      </div>
     </div>
   );
 };

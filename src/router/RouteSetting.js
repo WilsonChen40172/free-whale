@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import GlobalMethod from "../global/GlobalMethod";
 import Home from "../views/Home";
 import Stock from "../views/Stock";
 import F2E from "../views/F2E";
@@ -12,10 +13,10 @@ function RouteSetting() {
       <Navbar></Navbar>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/stock" element={<Stock />} />
-        <Route path="/f2e" element={<F2E />} />
-        <Route path="*" element={<Home />} />
+        <Route path={"/"} element={<Home />} />
+        <Route path={"/stock"} element={<Stock />} />
+        <Route path={"/f2e"} element={<F2E />} />
+        <Route path={"*"} element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

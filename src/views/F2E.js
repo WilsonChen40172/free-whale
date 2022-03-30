@@ -14,13 +14,17 @@ const F2E = () => {
   return (
     <div className="F2E">
       <div className="section">
-        <p>hooks練習</p>
-        <p>我是{number}</p>
-        <Button onClick={() => setNumber(number + 1)}>+</Button>
-        <Button onClick={() => setNumber(number - 1)}>-</Button>
+        <div className="container">
+          <p>hooks練習</p>
+          <p>我是{number}</p>
+          <Button onClick={() => setNumber(number + 1)}>+</Button>
+          <Button onClick={() => setNumber(number - 1)}>-</Button>
+        </div>
       </div>
       <div className="section">
-        <Counter />
+        <div className="container">
+          <Counter />
+        </div>
       </div>
     </div>
   );

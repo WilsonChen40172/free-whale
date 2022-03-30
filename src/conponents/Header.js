@@ -1,4 +1,5 @@
 import logo from "../images/logo.png";
+import GlobalMethod from "../global/GlobalMethod";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
@@ -7,14 +8,17 @@ const Header = () => {
         <img src={logo} alt="" className="logo" />
         <ul className="d-flex justify-content-between align-items-center">
           <li>
-            <Link to={"/"}>首頁</Link>
+            <Link to={GlobalMethod.myVideoOfficialMachine() + "/"}>首頁</Link>
           </li>
           <li>
-            <Link to={"/F2E"}>F2E</Link>
+            <Link to={GlobalMethod.myVideoOfficialMachine() + "/stock"}>
+              Stock
+            </Link>
           </li>
           <li>
-            <Link to={"/stock"}>Stock</Link>
+            <Link to={GlobalMethod.myVideoOfficialMachine() + "/F2E"}>F2E</Link>
           </li>
+
           <li>{/* <a href="/">舞蹈</a> */}</li>
           <li>{/* <a href="/">健身</a> */}</li>
           <li>{/* <a href="/">滑板</a> */}</li>

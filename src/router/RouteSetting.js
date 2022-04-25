@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 // import GlobalMethod from "../global/GlobalMethod";
 import Home from "../views/Home";
 import Stock from "../views/Stock";
@@ -9,7 +10,7 @@ import Navbar from "../conponents/Navbar";
 
 function RouteSetting() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar></Navbar>
       <Header></Header>
       <Routes>
@@ -18,7 +19,7 @@ function RouteSetting() {
         <Route path={"/f2e"} element={<F2E />} />
         <Route path={"*"} element={<Home />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

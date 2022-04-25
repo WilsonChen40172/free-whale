@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.3a3bd807.css",
-    "main.js": "./static/js/main.104af3a1.js",
+    "main.js": "./static/js/main.9892cba9.js",
     "static/media/wilson_home_5.JPG": "./static/media/wilson_home_5.29d6c38002e8c7d87326.JPG",
     "static/media/wilson_home_3.JPG": "./static/media/wilson_home_3.19f7853d2f674af3e08f.JPG",
     "static/media/wilson_home_2.JPG": "./static/media/wilson_home_2.4c6c0a2a7462609d644a.JPG",
@@ -10,10 +10,10 @@
     "static/media/logo.png": "./static/media/logo.a99a1ee1475260786313.png",
     "index.html": "./index.html",
     "main.3a3bd807.css.map": "./static/css/main.3a3bd807.css.map",
-    "main.104af3a1.js.map": "./static/js/main.104af3a1.js.map"
+    "main.9892cba9.js.map": "./static/js/main.9892cba9.js.map"
   },
   "entrypoints": [
     "static/css/main.3a3bd807.css",
-    "static/js/main.104af3a1.js"
+    "static/js/main.9892cba9.js"
   ]
 }

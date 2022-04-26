@@ -2,6 +2,9 @@ $mySpotlight: #f5bc04;
 $myBackground: #fff;
 $myFont: #222;
 
+// header高度&logo長寬
+$headerHeight: 60px;
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -9,13 +12,14 @@ $myFont: #222;
 .App {
   background-color: $myBackground;
   color: $myFont;
-  padding-top: 60px;
+  // +1rem
+  padding-top: $headerHeight + 16px;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
+  width: $headerHeight;
+  height: $headerHeight;
+  object-fit: contain;
   border-radius: 50%;
 }
 

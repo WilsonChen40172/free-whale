@@ -1,14 +1,16 @@
-import logo from "../images/logo.png";
+import logo from "../images/free_whale_logo.jpeg";
 // import GlobalMethod from "../global/GlobalMethod";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header">
       <div className="container d-flex">
-        <img src={logo} alt="" className="logo" />
+        <Link to={"/"}>
+          <img src={logo} alt="" className="logo" />
+        </Link>
         <ul className="d-flex justify-content-between align-items-center">
           <li>
-            <Link to={"/"}>首頁</Link>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
             <Link to={"/stock"}>Stock</Link>

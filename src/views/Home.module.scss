@@ -1,0 +1,31 @@
+.imgWall {
+  .onePicWall {
+    height: 70vh;
+    img {
+      height: 70vh;
+    }
+  }
+  .fourPicsWall {
+    height: 70vh;
+    img {
+      height: 35vh;
+    }
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  p {
+    position: absolute;
+    bottom: 0rem;
+    right: 1rem;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+  .picCard {
+    position: relative;
+  }
+}

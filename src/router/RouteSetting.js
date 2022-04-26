@@ -5,8 +5,8 @@ import Home from "../views/Home";
 import Stock from "../views/Stock";
 import F2E from "../views/F2E";
 import NotFound from "../views/NotFound";
-import Header from "../conponents/Header";
-import Navbar from "../conponents/Navbar";
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 function RouteSetting() {
   return (

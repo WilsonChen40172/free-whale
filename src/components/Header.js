@@ -1,14 +1,17 @@
 import logo from "../images/free_whale_logo.jpeg";
 // import GlobalMethod from "../global/GlobalMethod";
 import { Link } from "react-router-dom";
+import style from "./Header.module.scss";
 const Header = () => {
   return (
-    <div className="header">
-      <div className="container d-flex">
-        <Link to={"/"}>
-          <img src={logo} alt="" className="logo" />
-        </Link>
-        <ul className="d-flex justify-content-between align-items-center">
+    <section className={style.header}>
+      <div className={style.headerList}>
+        <ul className="">
+          {/* <li className={style.logo}>
+            <Link to={"/"}>
+              <img src={logo} alt="" />
+            </Link>
+          </li> */}
           <li>
             <Link to={"/"}>Home</Link>
           </li>
@@ -24,7 +27,7 @@ const Header = () => {
           <li>{/* <a href="/">滑板</a> */}</li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,6 +6,7 @@ const F2E = () => {
 
   useEffect(() => {
     //did mount
+    document.title = "F2E";
     return () => {
       //will mount
     };

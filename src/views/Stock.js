@@ -22,7 +22,7 @@ const Stock = (props) => {
   // 相似於 componentDidMount 和 componentDidUpdate:
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
-    document.title = `股票相關`;
+    document.title = "Stock";
     // console.log(parseFloat(1.4000000000000001.toPrecision(12)) === 1.4);  // True)
   });
 

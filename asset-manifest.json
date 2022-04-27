@@ -1,19 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.2ae726ce.css",
-    "main.js": "./static/js/main.aaba54fd.js",
-    "static/media/wilson_home_5.JPG": "./static/media/wilson_home_5.29d6c38002e8c7d87326.JPG",
-    "static/media/wilson_home_3.JPG": "./static/media/wilson_home_3.19f7853d2f674af3e08f.JPG",
-    "static/media/wilson_home_2.JPG": "./static/media/wilson_home_2.4c6c0a2a7462609d644a.JPG",
+    "main.css": "./static/css/main.cbb3f7b5.css",
+    "main.js": "./static/js/main.0c3110e1.js",
     "static/media/wilson_home_1.JPG": "./static/media/wilson_home_1.ece9db6d0fd689d54db7.JPG",
-    "static/media/wilson_home_4.JPG": "./static/media/wilson_home_4.50d7d6715a46c8e3809b.JPG",
     "static/media/free_whale_logo.jpeg": "./static/media/free_whale_logo.7ea0bab15ab7d8770227.jpeg",
     "index.html": "./index.html",
-    "main.2ae726ce.css.map": "./static/css/main.2ae726ce.css.map",
-    "main.aaba54fd.js.map": "./static/js/main.aaba54fd.js.map"
+    "main.cbb3f7b5.css.map": "./static/css/main.cbb3f7b5.css.map",
+    "main.0c3110e1.js.map": "./static/js/main.0c3110e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ae726ce.css",
-    "static/js/main.aaba54fd.js"
+    "static/css/main.cbb3f7b5.css",
+    "static/js/main.0c3110e1.js"
   ]
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import style from "./Stock.module.scss";
 
 const Stock = (props) => {
   //最高價
@@ -47,7 +48,7 @@ const Stock = (props) => {
 
   return (
 
-    <div className="stock container">
+    <div className={"container "+style.stock}>
       <div id="gold" className="section">
         <p className="title">黃金分割率</p>
         <div className="inputBox">

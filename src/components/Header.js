@@ -1,4 +1,4 @@
-import logo from "../images/free_whale_logo.jpeg";
+// import logo from "../images/free_whale_logo.jpeg";
 // import GlobalMethod from "../global/GlobalMethod";
 import { Link } from "react-router-dom";
 import style from "./Header.module.scss";

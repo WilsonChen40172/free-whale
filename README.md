@@ -46,3 +46,10 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## 能使用sass
 
 You should use terminal : npm install node-sass sass-loader --save(MacOs)
+
+## fontawesome
+
+基本icon:
+npm i --save @fortawesome/react-fontawesome@latest
+社群app相關icon:
+npm i --save @fortawesome/free-brands-svg-icons

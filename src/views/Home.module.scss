@@ -4,7 +4,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgba(155, 36, 171, 0.4);
+  background-blend-mode: multiply;
+  background-image: url(../images/wilson_home_1.JPG);
+  background-size: cover;
+  background-position: center center;
   .text {
     padding: 4em;
+    .title {
+      font-size: 2.75em;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+    .introduce {
+      font-size: 1.25em;
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 0.5rem;
+    }
+    .community {
+      a {
+        color: #fff;
+        display: inline-block;
+        margin: 10px;
+      }
+    }
   }
 }

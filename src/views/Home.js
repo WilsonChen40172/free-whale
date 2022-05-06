@@ -38,11 +38,11 @@ const Home = () => {
         </div>
       </section>
       <ImgWall></ImgWall>
-      <div className="section">
+      <section className="">
         <div className="container">
           <p className="title py-2">About Me</p>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

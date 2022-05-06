@@ -60,3 +60,19 @@
     }
   }
 }
+
+//pad
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 100%;
+    height: 4rem;
+    .headerList {
+      ul {
+        display: flex;
+        li{
+          text-align: center;
+        }
+      }
+    }
+  }
+}

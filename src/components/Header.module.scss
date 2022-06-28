@@ -8,54 +8,55 @@
   width: 20rem;
   height: 100vh;
   background: #312450;
-  .headerList {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    ul {
+}
+
+.headerList {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  ul {
+    width: 100%;
+    //   margin-top: -80px;
+    padding: 0;
+    li {
+      text-align: right;
       width: 100%;
-      //   margin-top: -80px;
-      padding: 0;
-      li {
-        text-align: right;
+      padding: 0.5rem 2rem;
+      font-size: 16px;
+      font-weight: 800;
+      // margin-top: 1.5rem;
+      a {
         width: 100%;
-        padding: 0.5rem 2rem;
-        font-size: 16px;
-        font-weight: 800;
-        // margin-top: 1.5rem;
-        a {
-          width: 100%;
-          text-decoration: none;
-          color: #fff;
-          transition: color 0.2s ease;
-          border-bottom: 1px #312450;
-          position: relative;
-          display: block;
-          padding: 1.35em 0;
-          transition: 0.2s all;
-        }
-        a:before,
-        a:after {
-          background: #3c2c62;
-          border-radius: 0.2em;
-          bottom: 0;
-          content: "";
-          height: 0.2em;
-          position: absolute;
-          right: 0;
-          width: 100%;
-        }
-        a:after {
-          max-width: 0;
-        }
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.2s ease;
+        border-bottom: 1px #312450;
+        position: relative;
+        display: block;
+        padding: 1.35em 0;
+        transition: 0.2s all;
       }
-      li:hover {
-        a:after,
-        a.active {
-          max-width: 100%;
-          transition: max-width 0.2s ease;
-          background-image: linear-gradient(to right, #5e42a6, #b74e91);
-        }
+      a:before,
+      a:after {
+        background: #3c2c62;
+        border-radius: 0.2em;
+        bottom: 0;
+        content: "";
+        height: 0.2em;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+      a:after {
+        max-width: 0;
+      }
+    }
+    li:hover {
+      a:after,
+      a.active {
+        max-width: 100%;
+        transition: max-width 0.2s ease;
+        background-image: linear-gradient(to right, #5e42a6, #b74e91);
       }
     }
   }
@@ -66,12 +67,12 @@
   .header {
     width: 100%;
     height: 4rem;
-    .headerList {
-      ul {
-        display: flex;
-        li{
-          text-align: center;
-        }
+  }
+  .headerList {
+    ul {
+      display: flex;
+      li {
+        text-align: center;
       }
     }
   }

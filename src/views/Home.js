@@ -6,8 +6,10 @@ import {
   faFacebook,
   faInstagram,
   faTwitter,
-  faGithub
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+
+// import { Link } from "react-scroll";
 
 const Home = () => {
   useEffect(() => {
@@ -22,16 +24,32 @@ const Home = () => {
           <h1 className={style.title}>Free Whale</h1>
           <p className={style.introduce}>Coding Dance Invest SkateBoard </p>
           <div className={style.community}>
-            <a href="https://www.instagram.com/whale.js" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/whale.js"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
-            <a href="https://www.fb.com/kk811215" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.fb.com/kk811215"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
-            <a href="https://www.twitter.com/kk811215" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.twitter.com/kk811215"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
-            <a href="https://github.com/WilsonChen40172" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/WilsonChen40172"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </div>

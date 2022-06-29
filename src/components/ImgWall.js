@@ -43,7 +43,7 @@ const ImgWall = () => {
             About Dance.
           </a>
         </div>
-      </div>ㄑ
+      </div>
     </section>
   );
 };

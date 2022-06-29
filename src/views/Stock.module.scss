@@ -1,6 +1,13 @@
-.stock{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+.stock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.input-group-prepend {
+  width: 20%;
+  label {
+    justify-content: end;
+  }
 }

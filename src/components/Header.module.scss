@@ -51,9 +51,9 @@
         max-width: 0;
       }
     }
-    li:hover {
-      a:after,
-      a.active {
+    li:hover,li.active {
+      a:after
+      {
         max-width: 100%;
         transition: max-width 0.2s ease;
         background-image: linear-gradient(to right, #5e42a6, #b74e91);
@@ -61,6 +61,7 @@
     }
   }
 }
+
 
 //pad
 @media screen and (max-width: 1024px) {

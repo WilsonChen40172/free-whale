@@ -5,26 +5,28 @@ import style from "./Header.module.scss";
 import { useLocation } from "react-router-dom";
 
 const Header = () => {
-  const [thisRoute, setThisRoute] = useState("");
+  const [thisRoute, setThisRoute] = useState("123");
+  // const history = useHistory();
   const location = useLocation();
-  
+  // console.log(location);
+
+  //網址更動
   useEffect(() => {
-    console.log("Location changed");
-    setThisRoute(document.title);
-  },[location]);
+    setThisRoute(location.pathname);
+  }, [location]);
 
   return (
     <section className={style.header}>
       <div className={style.headerList}>
         <ul className="">
-          <li className={(document.title === "Free Whale" ? " active" : "")}>
-            <Link to={"/"}>Home</Link>
+          <li className={thisRoute === "/" ? style.active : ""}>
+            <Link className={thisRoute === "/" ? " " : ""} to={"/"}>Home</Link>
           </li>
-          <li className={(document.title === "Stock" ? " active" : "")}>
+          <li className={thisRoute === "/stock" ? style.active : ""}>
             <Link to={"/stock"}>Stock</Link>
           </li>
-          <li className={(document.title === "F2E" ? " active" : "")}>
-            <Link to={"/F2E"}>F2E{thisRoute}</Link>
+          <li className={thisRoute === "/F2E" ? style.active : ""}>
+            <Link to={"/F2E"} className={thisRoute === "/F2E" ? " " : ""}>F2E</Link>
           </li>
         </ul>
       </div>

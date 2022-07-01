@@ -194,13 +194,6 @@ p {
   margin-bottom: 1.5rem;
 }
 
-.input-bkcolor,
-.input-bkcolor:focus {
-  color: rgba(255, 255, 255, 0.55);
-  background: rgba(255, 255, 255, 0.05);
-  outline: #5e42a6;
-}
-
 //pad
 @media screen and (max-width: 1024px) {
   .App {

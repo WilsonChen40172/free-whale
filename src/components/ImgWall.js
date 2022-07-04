@@ -11,8 +11,8 @@ const ImgWall = () => {
           <img src="https://i.imgur.com/mRviZyI.jpg" alt="wilsonPic" />
         </div>
         <div className={style.text}>
-          <h2>Title</h2>
-          <p>Text</p>
+          <h2>Front End Engineer Life</h2>
+          <p>About My Front End.</p>
           <a href="/" className={style.button}>
             About F2E.
           </a>
@@ -24,8 +24,8 @@ const ImgWall = () => {
           <img src="https://i.imgur.com/pe2rsCK.jpg" alt="wilsonPic" />
         </div>
         <div className={style.text}>
-          <h2>Title</h2>
-          <p>Text</p>
+          <h2>Skateboard Life</h2>
+          <p>About My Skateboard Life</p>
           <a href="/" className={style.button}>
             About Skate.
           </a>
@@ -37,8 +37,8 @@ const ImgWall = () => {
           <img src="https://i.imgur.com/3JKQ2PT.jpg" alt="wilsonPic" />
         </div>
         <div className={style.text}>
-          <h2>Title</h2>
-          <p>Text</p>
+          <h2>Dance Life</h2>
+          <p>About My Dance Life</p>
           <a href="/" className={style.button}>
             About Dance.
           </a>

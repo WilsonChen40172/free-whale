@@ -1,0 +1,71 @@
+.element {
+  /* Change coefficient to make responsive */
+  --coefficient: 1px;
+  height: calc(10 * var(--coefficient, 1px));
+  width: calc(10 * var(--coefficient, 1px));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+}
+.element:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(
+    calc(-55 * var(--coefficient, 1px)),
+    calc(-55 * var(--coefficient, 1px))
+  );
+  box-shadow: calc(30 * var(--coefficient, 1px))
+      calc(20 * var(--coefficient, 1px)) 0 0 #2ecc71,
+    calc(40 * var(--coefficient, 1px)) calc(20 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(50 * var(--coefficient, 1px)) calc(20 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(60 * var(--coefficient, 1px)) calc(20 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(70 * var(--coefficient, 1px)) calc(20 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(80 * var(--coefficient, 1px)) calc(20 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(30 * var(--coefficient, 1px)) calc(30 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(80 * var(--coefficient, 1px)) calc(30 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(30 * var(--coefficient, 1px)) calc(40 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(60 * var(--coefficient, 1px)) calc(40 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(80 * var(--coefficient, 1px)) calc(40 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(30 * var(--coefficient, 1px)) calc(50 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(40 * var(--coefficient, 1px)) calc(50 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(60 * var(--coefficient, 1px)) calc(50 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(80 * var(--coefficient, 1px)) calc(50 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(40 * var(--coefficient, 1px)) calc(60 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(80 * var(--coefficient, 1px)) calc(60 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(40 * var(--coefficient, 1px)) calc(70 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(60 * var(--coefficient, 1px)) calc(70 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(70 * var(--coefficient, 1px)) calc(70 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(80 * var(--coefficient, 1px)) calc(70 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(40 * var(--coefficient, 1px)) calc(80 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(50 * var(--coefficient, 1px)) calc(80 * var(--coefficient, 1px)) 0 0
+      #2ecc71,
+    calc(60 * var(--coefficient, 1px)) calc(80 * var(--coefficient, 1px)) 0 0
+      #2ecc71;
+}

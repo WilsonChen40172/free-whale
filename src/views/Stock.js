@@ -211,7 +211,7 @@ const Stock = () => {
           <div className={"input-group "+style['input-group-half']}>
             <span className="pt-2">
               {whenYear}
-              {languageBag.endMoney}：{calculation()}
+              {languageBag.endMoney}:{calculation()}
             </span>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { Counter } from "../features/counter/Counter";
+import style from "./F2E.module.scss";
 const F2E = () => {
   const [number, setNumber] = useState(0);
 
@@ -26,6 +27,10 @@ const F2E = () => {
         <div className="container">
           <Counter />
         </div>
+      </div>
+      <div className="section">
+        <div className={style.element}></div>
+        <input type="hidden" value="https://pxl.netlify.app/" />
       </div>
     </div>
   );

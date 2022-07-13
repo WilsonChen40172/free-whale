@@ -4,6 +4,7 @@ import { fetchCount } from './counterAPI';
 const initialState = {
   value: 0,
   status: 'idle',
+  languageType: 0,
 };
 
 // The function below is called a thunk and allows us to perform async logic. It

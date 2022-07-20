@@ -25,7 +25,7 @@ const Header = () => {
           <li className={thisRoute === "/stock" ? style.active : ""}>
             <Link to={"/stock"}>Stock</Link>
           </li>
-          <li className={thisRoute === "/F2E" ? style.active : ""}>
+          <li className={thisRoute === "/F2E" ? style.active : thisRoute==="/LeetCode" ? style.active : ""}>
             <Link to={"/F2E"} className={thisRoute === "/F2E" ? " " : ""}>F2E</Link>
           </li>
         </ul>

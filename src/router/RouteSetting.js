@@ -5,6 +5,7 @@ import Home from "../views/Home";
 import Stock from "../views/Stock";
 import F2E from "../views/F2E";
 import NotFound from "../views/NotFound";
+import LeetCode from "../views/LeetCode";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 
@@ -18,6 +19,7 @@ function RouteSetting() {
         <Route path={"/stock"} element={<Stock />} />
         <Route path={"/f2e"} element={<F2E />} />
         <Route path={"*"} element={<NotFound />} />
+        <Route path={"/LeetCode"} element={<LeetCode />} />
       </Routes>
     </HashRouter>
   );

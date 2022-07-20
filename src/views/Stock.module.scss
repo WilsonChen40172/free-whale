@@ -36,3 +36,9 @@
   border: 1px solid #fff;
   box-shadow: 0 0 0 1px #ffffff;
 }
+
+@media screen and (max-width: 1024px) {
+  .stock {
+    height: auto;
+  }
+}

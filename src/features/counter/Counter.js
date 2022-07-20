@@ -23,21 +23,26 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
-        <button
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          -
-        </button>
-        <span className={styles.value}>{count}</span>
-        <button
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          +
-        </button>
+        <div>
+          <p>Redux練習</p>
+        </div>
+        <div>
+          <button
+            className={styles.button}
+            aria-label="Decrement value"
+            onClick={() => dispatch(decrement())}
+          >
+            -
+          </button>
+          <span className={styles.value}>{count}</span>
+          <button
+            className={styles.button}
+            aria-label="Increment value"
+            onClick={() => dispatch(increment())}
+          >
+            +
+          </button>
+        </div>
       </div>
       <div className="text-center">
         <p>Loading Type:{loadingType}</p>

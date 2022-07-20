@@ -16,7 +16,7 @@ const F2E = () => {
   }, []);
 
   return (
-    <div className="F2E">
+    <div className="F2E flex-all-center vh-100">
       <div className="section">
         <div className="container">
           <div className="text-center">
@@ -34,7 +34,9 @@ const F2E = () => {
       </div>
       <div className="section">
         <p>css一行+一個div產生圖片</p>
-        <div className={style.element}></div>
+        <div className="position-relative">
+          <div className={style.element}></div>
+        </div>
         <input type="hidden" value="https://pxl.netlify.app/" />
       </div>
       <div className="section">

@@ -1,6 +1,7 @@
 import React from "react";
 // import wilson1 from "../images/wilson_home_1.jpg"
 import style from "./ImgWall.module.scss";
+import { Link } from "react-router-dom";
 
 const ImgWall = () => {
   return (
@@ -13,9 +14,9 @@ const ImgWall = () => {
         <div className={style.text}>
           <h2>Front End Engineer Life</h2>
           <p>About My Front End.</p>
-          <a href="/" className={style.button}>
+          <Link to="/F2E" className="defaultButton">
             About F2E.
-          </a>
+          </Link>
         </div>
       </div>
       <div className={style.picCard}>
@@ -26,7 +27,7 @@ const ImgWall = () => {
         <div className={style.text}>
           <h2>Skateboard Life</h2>
           <p>About My Skateboard Life</p>
-          <a href="/" className={style.button}>
+          <a href="/" className="defaultButton">
             About Skate.
           </a>
         </div>
@@ -39,7 +40,7 @@ const ImgWall = () => {
         <div className={style.text}>
           <h2>Dance Life</h2>
           <p>About My Dance Life</p>
-          <a href="/" className={style.button}>
+          <a href="/" className="defaultButton">
             About Dance.
           </a>
         </div>

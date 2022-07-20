@@ -8,7 +8,7 @@ const LeetCode = () => {
   });
   const [stringS, setStringS] = useState("");
   const [stringT, setStringT] = useState("");
-  const [result, setResult] = useState("false");
+  const [result, setResult] = useState("true");
 
   const compare = () => {
     if (stringS.length !== stringT.length) {
@@ -21,8 +21,8 @@ const LeetCode = () => {
   };
 
   return (
-    <div className={"container "+style.leetcode}>
-      <p className="leetCodeTitle">LeetCode 242. Valid Anagram</p>
+    <div className={style.leetcode}>
+      <h2>LeetCode 242. Valid Anagram</h2>
       <div className="leetCodeTopic">
         <p>
           Given two strings s and t, write a function to determine if t is an
@@ -32,22 +32,33 @@ const LeetCode = () => {
         </p>
       </div>
       <div className="leetCodeAnswer">
-        <input
-          type="text"
-          id="s"
-          value={stringS}
-          className="form-control"
-          onChange={(event) => setStringS(event.target.value)}
-        />
-        <input
-          type="text"
-          id="t"
-          value={stringT}
-          className="form-control"
-          onChange={(event) => setStringT(event.target.value)}
-        />
-        <button onClick={compare} className="btn btn-danger">Run</button>
-        <p>{result}</p>
+        <div className="inputTable">
+          <div className="half mb-3">
+            <label htmlFor="s">String S</label>
+            <input
+              type="text"
+              id="s"
+              value={stringS}
+              className="form-control"
+              onChange={(event) => setStringS(event.target.value)}
+            />
+          </div>
+          <div className="half mb-3">
+            <label htmlFor="t">String T</label>
+            <input
+              type="text"
+              id="t"
+              value={stringT}
+              className="form-control"
+              onChange={(event) => setStringT(event.target.value)}
+            />
+          </div>
+        </div>
+
+        <button onClick={compare} className="btn defaultButton mb-3">
+          Run
+        </button>
+        <font className="d-block" size="3">Result:<span>{result}</span></font>
       </div>
     </div>
   );

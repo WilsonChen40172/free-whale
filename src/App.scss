@@ -167,11 +167,15 @@ p {
   margin: 0 0 2em 0;
 }
 
+// APP
+
 .App {
   background-color: $myBackground;
   color: $myFont;
   margin-left: 20rem;
 }
+
+// 共用
 
 .navbar {
   position: absolute;
@@ -186,12 +190,72 @@ p {
   padding: 1rem;
 }
 
+.flex-all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+p {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
 .title {
   font-size: 24px;
   border-bottom: 1px solid #777;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
+}
+
+.defaultButton {
+  text-align: center;
+  width: 200px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3em;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-color: rgba(255, 255, 255, 0.15);
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.defaultButton:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+  outline: none;
+}
+
+.defaultButton:focus {
+  outline: none;
+}
+
+.inputTable {
+  display: flex;
+  :first-child {
+    padding-right: 10px;
+  }
+  :last-child {
+    padding-left: 10px;
+  }
+  label {
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 0.7em 0;
+    display: block;
+    font-size: 1.1em;
+  }
+}
+
+.half {
+  width: 50%;
 }
 
 //pad

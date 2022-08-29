@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import style from "./LeetCode.module.scss";
+import { useHistory } from "react-router-dom";
 
 const LeetCode = () => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode";
-  });
+  });  
+
   const [stringS, setStringS] = useState("");
   const [stringT, setStringT] = useState("");
   const [result, setResult] = useState("true");
+
+  const [topic, setTopic] = useState(0);
 
   const compare = () => {
     if (stringS.length !== stringT.length) {
@@ -18,6 +22,7 @@ const LeetCode = () => {
     const thisS = stringS.split("").sort().join("");
     const thisT = stringT.split("").sort().join("");
     setResult(String(thisS === thisT));
+    console.log("useHistory")
   };
 
   return (
@@ -58,7 +63,9 @@ const LeetCode = () => {
         <button onClick={compare} className="btn defaultButton mb-3">
           Run
         </button>
-        <font className="d-block" size="3">Result:<span>{result}</span></font>
+        <font className="d-block" size="3">
+          Result:<span>{result}</span>
+        </font>
       </div>
     </div>
   );

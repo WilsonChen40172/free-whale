@@ -19,7 +19,7 @@ function RouteSetting() {
         <Route path={"/stock"} element={<Stock />} />
         <Route path={"/f2e"} element={<F2E />} />
         <Route path={"*"} element={<NotFound />} />
-        <Route path={"/LeetCode"} element={<LeetCode />} />
+        <Route path={"/f2e/LeetCode/:topicNumber"} element={<LeetCode />} />
       </Routes>
     </HashRouter>
   );

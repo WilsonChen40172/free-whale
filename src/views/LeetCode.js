@@ -1,74 +1,32 @@
-import React, { useEffect, useState } from "react";
-import style from "./LeetCode.module.scss";
-import { useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import LeetCodeHome from "./LeetCodePage/LeetCodeHome";
+import LeetCode242 from "./LeetCodePage/LeetCode242";
 
 const LeetCode = () => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode";
-  });  
+  });
 
-  const [stringS, setStringS] = useState("");
-  const [stringT, setStringT] = useState("");
-  const [result, setResult] = useState("true");
+  const { topicNumber } = useParams();
 
-  const [topic, setTopic] = useState(0);
-
-  const compare = () => {
-    if (stringS.length !== stringT.length) {
-      setResult("false");
-      return false;
-    }
-    const thisS = stringS.split("").sort().join("");
-    const thisT = stringT.split("").sort().join("");
-    setResult(String(thisS === thisT));
-    console.log("useHistory")
-  };
-
-  return (
-    <div className={style.leetcode}>
-      <h2>LeetCode 242. Valid Anagram</h2>
-      <div className="leetCodeTopic">
-        <p>
-          Given two strings s and t, write a function to determine if t is an
-          anagram of s. For example, s = "anagram", t = "nagaram", return true.
-          s = "rat", t = "car", return false. Note: You may assume the string
-          contains only lowercase alphabets.
-        </p>
-      </div>
-      <div className="leetCodeAnswer">
-        <div className="inputTable">
-          <div className="half mb-3">
-            <label htmlFor="s">String S</label>
-            <input
-              type="text"
-              id="s"
-              value={stringS}
-              className="form-control"
-              onChange={(event) => setStringS(event.target.value)}
-            />
-          </div>
-          <div className="half mb-3">
-            <label htmlFor="t">String T</label>
-            <input
-              type="text"
-              id="t"
-              value={stringT}
-              className="form-control"
-              onChange={(event) => setStringT(event.target.value)}
-            />
-          </div>
+  switch (topicNumber) {
+    case "200":
+      return (
+        <div>
+          <p>200</p>
         </div>
+      );
+      break;
+    case "242":
+      return <LeetCode242></LeetCode242>;
+      break;
 
-        <button onClick={compare} className="btn defaultButton mb-3">
-          Run
-        </button>
-        <font className="d-block" size="3">
-          Result:<span>{result}</span>
-        </font>
-      </div>
-    </div>
-  );
+    default:
+      return <LeetCodeHome></LeetCodeHome>;
+      break;
+  }
 };
 
 export default LeetCode;

@@ -40,9 +40,13 @@ const F2E = () => {
         <input type="hidden" value="https://pxl.netlify.app/" />
       </div>
       <div className="section">
-        <div className="text-center">
+        <div className="text-center p-4">
           <p>leetCode練習區</p>
           <Link to={"/f2e/LeetCode/0"}>LeetCode</Link>
+        </div>
+        <div className="text-center p-4">
+          <p>象棋機率</p>
+          <Link to={"/f2e/LeetCode/0"}>象棋機率</Link>
         </div>
       </div>
     </div>

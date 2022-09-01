@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Link
 
-HomePage:[https://wilsonchen40172.github.io/free-whale]
+HomePage [https://wilsonchen40172.github.io/free-whale]
 
 ## Available Scripts
 

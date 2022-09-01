@@ -20,13 +20,32 @@ const Header = () => {
       <div className={style.headerList}>
         <ul className="">
           <li className={thisRoute === "/" ? style.active : ""}>
-            <Link className={thisRoute === "/" ? " " : ""} to={"/"}>Home</Link>
+            <Link className={thisRoute === "/" ? " " : ""} to={"/"}>
+              Home
+            </Link>
           </li>
           <li className={thisRoute === "/stock" ? style.active : ""}>
             <Link to={"/stock"}>Stock</Link>
           </li>
-          <li className={thisRoute === "/F2E" ? style.active : thisRoute==="/LeetCode" ? style.active : ""}>
-            <Link to={"/F2E"} className={thisRoute === "/F2E" ? " " : ""}>F2E</Link>
+          <li
+            className={
+              thisRoute === "/F2E"
+                ? style.active
+                : thisRoute === "/LeetCode"
+                ? style.active
+                : ""
+            }
+          >
+            <Link to={"/F2E"} className={thisRoute === "/F2E" ? " " : ""}>
+              F2E
+            </Link>
+          </li>
+          <li>
+            <select name="" id="" className="form-select text-right">
+              <option value="">Default</option>
+              <option value="">English</option>
+              <option value="">中文</option>
+            </select>
           </li>
         </ul>
       </div>

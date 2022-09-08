@@ -41,10 +41,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <select name="" id="" className="form-select text-right">
-              <option value="">Default</option>
-              <option value="">English</option>
-              <option value="">中文</option>
+            <select name="" id="" className={"text-right form-select "+style.purpleSelect}>
+              <option value="0">English</option>
+              <option value="1">中文</option>
             </select>
           </li>
         </ul>

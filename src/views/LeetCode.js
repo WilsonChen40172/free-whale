@@ -1,13 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LeetCodeHome from "./LeetCodePage/LeetCodeHome";
 import LeetCode242 from "./LeetCodePage/LeetCode242";
 
 const LeetCode = () => {
+  const [parsed, setParsed] = useState("");
+
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode";
   });
+
+  // setParsed(window.location.search);
+  // console.log(parsed);
 
   const { topicNumber } = useParams();
 

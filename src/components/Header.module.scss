@@ -51,9 +51,9 @@
         max-width: 0;
       }
     }
-    li:hover,li.active {
-      a:after
-      {
+    li:hover,
+    li.active {
+      a:after {
         max-width: 100%;
         transition: max-width 0.2s ease;
         background-image: linear-gradient(to right, #5e42a6, #b74e91);
@@ -62,6 +62,18 @@
   }
 }
 
+.purpleSelect {
+  text-align: right;
+  color: #fff;
+  background-color: #312450;
+  border: #b74e91 3px solid;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.purpleSelect:focus {
+  border: #5e42a6 3px solid;
+}
 
 //pad
 @media screen and (max-width: 1024px) {

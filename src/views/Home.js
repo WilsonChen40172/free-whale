@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import style from "./Home.module.scss";
 import ImgWall from "../components/ImgWall";
+import AboutMe from "./AboutMe";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -56,11 +57,7 @@ const Home = () => {
         </div>
       </section>
       <ImgWall></ImgWall>
-      <section className="">
-        <div className="container">
-          <p className="title py-2">About Me</p>
-        </div>
-      </section>
+      <AboutMe></AboutMe>
     </div>
   );
 };

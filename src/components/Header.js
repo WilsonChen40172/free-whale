@@ -40,13 +40,25 @@ const Header = () => {
               F2E
             </Link>
           </li>
-          <li>
-            <select name="" id="" className={"text-right form-select "+style.purpleSelect}>
-              <option value="0">English</option>
-              <option value="1">中文</option>
-            </select>
+          <li className={thisRoute === "/Classic" ? style.active : ""}>
+            <Link
+              to={"/Classic"}
+              className={thisRoute === "/Classic" ? " " : ""}
+            >
+              Classic
+            </Link>
           </li>
         </ul>
+        <select
+          name=""
+          id=""
+          className={
+            "text-right form-select position-absolute " + style.purpleSelect
+          }
+        >
+          <option value="0">English</option>
+          <option value="1">中文</option>
+        </select>
       </div>
     </section>
   );

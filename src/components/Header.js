@@ -53,7 +53,7 @@ const Header = () => {
           name=""
           id=""
           className={
-            "text-right form-select position-absolute " + style.purpleSelect
+            "text-right form-select position-absolute "  + style.languageSelect
           }
         >
           <option value="0">English</option>

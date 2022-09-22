@@ -62,16 +62,19 @@
   }
 }
 
-.purpleSelect {
+.languageSelect {
+  bottom: 10px;
+  left: 10px;
   text-align: right;
   color: #fff;
   background-color: #312450;
   border: #b74e91 3px solid;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  width: 300px;
 }
 
-.purpleSelect:focus {
+.languageSelect:focus {
   border: #5e42a6 3px solid;
 }
 

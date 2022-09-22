@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import style from "./NotFound.module.scss";
 
 const NotFound = () => {
   useEffect(() => {
@@ -8,10 +9,9 @@ const NotFound = () => {
     // console.log(parseFloat(1.4000000000000001.toPrecision(12)) === 1.4);  // True)
   });
   return (
-    <div className="notFound">
-      <p>404 Not Found</p>
-      <p>Error Page</p>
-      <Link to="/">回首頁</Link>
+    <div className={style.notFound}>
+      <p>Page Not Found</p>
+      <Link to="/">Back To Home</Link>
     </div>
   );
 };

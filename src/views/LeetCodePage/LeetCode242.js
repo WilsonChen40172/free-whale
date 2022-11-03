@@ -3,6 +3,7 @@ import style from "../LeetCode.module.scss";
 import { Link } from "react-router-dom";
 
 const LeetCode242 = () => {
+
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode242";
@@ -11,7 +12,6 @@ const LeetCode242 = () => {
   const [stringS, setStringS] = useState("");
   const [stringT, setStringT] = useState("");
   const [result, setResult] = useState("true");
-
 
   const compare = () => {
     if (stringS.length !== stringT.length) {

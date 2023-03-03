@@ -10,7 +10,7 @@ const LeetCode242 = () => {
 
   
   return (
-    <div className={style.leetcode}>
+    <div className={style.leetCode}>
         <Link to={"/f2e/LeetCode/242"}>No.242</Link>
         <Link to={"/f2e/LeetCode/344"}>No.344</Link>
     </div>

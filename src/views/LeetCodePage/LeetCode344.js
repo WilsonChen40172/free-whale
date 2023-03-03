@@ -21,7 +21,7 @@ const LeetCode344 = () => {
   };
 
   return (
-    <div className={style.leetcode}>
+    <div className={style.leetCode}>
       <h2>LeetCode 344. Valid Anagram.</h2>
       <div className="leetCodeTopic">
         <p>
@@ -29,14 +29,16 @@ const LeetCode344 = () => {
           reversed. Example: Given s = "hello", return "olleh".
         </p>
       </div>
-      <div className="leetCodeTopic">
-        <input
-          type="text"
-          id="practiceString"
-          value={practiceString}
-          className="form-control"
-          onChange={(event) => setPracticeString(event.target.value)}
-        />
+      <div className={"leetCodeTopic " + style.leetCodeTopic}>
+        <div className="half mb-3">
+          <input
+            type="text"
+            id="practiceString"
+            value={practiceString}
+            className="form-control"
+            onChange={(event) => setPracticeString(event.target.value)}
+          />
+        </div>
         <button onClick={compare} className="btn defaultButton mb-3">
           Run
         </button>

@@ -24,7 +24,7 @@ const LeetCode242 = () => {
   };
 
   return (
-    <div className={style.leetcode}>
+    <div className={style.leetCode}>
       <h2>LeetCode 242. Valid Anagram.</h2>
       <div className="leetCodeTopic">
         <p>

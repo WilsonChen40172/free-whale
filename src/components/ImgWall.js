@@ -35,7 +35,7 @@ const ImgWall = () => {
       <div className={style.picCard}>
         <div className={style.mask}></div>
         <div className={style.img}>
-          <img src="https://i.imgur.com/3JKQ2PT.jpg" alt="wilsonPic" />
+          <img src="https://i.imgur.com/Bj1UIAX.jpg" alt="wilsonPic" />
         </div>
         <div className={style.text}>
           <h2>Dance Life</h2>

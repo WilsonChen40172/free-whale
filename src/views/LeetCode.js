@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import LeetCodeHome from "./LeetCodePage/LeetCodeHome";
 import LeetCode242 from "./LeetCodePage/LeetCode242";
+import LeetCode344 from "./LeetCodePage/LeetCode344";
 
 const LeetCode = () => {
-  const [parsed, setParsed] = useState("");
+  // const [parsed, setParsed] = useState("");
 
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
@@ -23,14 +24,15 @@ const LeetCode = () => {
           <p>200</p>
         </div>
       );
-      break;
+
     case "242":
       return <LeetCode242></LeetCode242>;
-      break;
+
+    case "344":
+      return <LeetCode344></LeetCode344>;
 
     default:
       return <LeetCodeHome></LeetCodeHome>;
-      break;
   }
 };
 

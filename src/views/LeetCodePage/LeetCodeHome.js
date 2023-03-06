@@ -8,11 +8,17 @@ const LeetCode242 = () => {
     document.title = "LeetCode Home";
   });
 
-  
   return (
     <div className={style.leetCode}>
-        <Link to={"/f2e/LeetCode/242"}>No.242</Link>
-        <Link to={"/f2e/LeetCode/344"}>No.344</Link>
+      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/242"}>
+        No.242
+      </Link>
+      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/344"}>
+        No.344
+      </Link>
+      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/345"}>
+        No.345
+      </Link>
     </div>
   );
 };

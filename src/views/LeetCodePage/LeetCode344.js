@@ -29,7 +29,7 @@ const LeetCode344 = () => {
           reversed. Example: Given s = "hello", return "olleh".
         </p>
       </div>
-      <div className={"leetCodeTopic " + style.leetCodeTopic}>
+      <div className={"leetCodeAnswer " + style.leetCodeTopic}>
         <div className="half mb-3">
           <input
             type="text"

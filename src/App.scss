@@ -258,7 +258,7 @@ p {
   width: 50%;
 }
 
-.pinkBackground{
+.pinkBackground {
   background-color: #b74e91;
 }
 
@@ -268,4 +268,10 @@ p {
     margin-top: 4rem;
     margin-left: 0;
   }
+}
+//隱藏input number右邊醜按鈕
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

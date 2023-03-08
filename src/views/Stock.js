@@ -114,7 +114,7 @@ const Stock = () => {
             </div>
             <input
               id="maxNumber"
-              type="text"
+              type="number"
               placeholder={languageBag.maxNumber}
               onChange={(e) => setMaxNumber(e.target.value)}
               value={maxNumber}
@@ -129,7 +129,7 @@ const Stock = () => {
             </div>
             <input
               id="minNumber"
-              type="text"
+              type="number"
               placeholder={languageBag.minNumber}
               onChange={(e) => setMinNumber(e.target.value)}
               value={minNumber}
@@ -171,7 +171,7 @@ const Stock = () => {
             </div>
             <input
               id="moneyYear"
-              type="text"
+              type="number"
               placeholder={languageBag.moneyYear}
               onChange={(e) => setMoneyYear(e.target.value)}
               value={moneyYear}
@@ -186,7 +186,7 @@ const Stock = () => {
             </div>
             <input
               id="percentYear"
-              type="text"
+              type="number"
               placeholder={languageBag.py}
               onChange={(e) => setPercentYear(e.target.value)}
               value={percentYear}
@@ -201,7 +201,7 @@ const Stock = () => {
             </div>
             <input
               id="whenYear"
-              type="text"
+              type="number"
               placeholder={languageBag.whenYear}
               onChange={(e) => setWhenYear(e.target.value)}
               value={whenYear}

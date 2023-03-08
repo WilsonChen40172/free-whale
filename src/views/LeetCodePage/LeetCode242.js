@@ -3,7 +3,6 @@ import style from "../LeetCode.module.scss";
 import { Link } from "react-router-dom";
 
 const LeetCode242 = () => {
-
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode242";
@@ -34,7 +33,7 @@ const LeetCode242 = () => {
           contains only lowercase alphabets.
         </p>
       </div>
-      <div className="leetCodeAnswer">
+      <div className={"leetCodeAnswer " + style.leetCodeTopic}>
         <div className="inputTable">
           <div className="half mb-3">
             <label htmlFor="s">String S</label>

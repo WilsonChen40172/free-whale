@@ -44,7 +44,7 @@ const LeetCode345 = () => {
           does not include the letter "y".
         </p>
       </div>
-      <div className={"leetCodeTopic " + style.leetCodeTopic}>
+      <div className={"leetCodeAnswer " + style.leetCodeTopic}>
         <div className="half mb-3">
           <input
             type="text"

@@ -49,7 +49,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <select
+        {/* <select
           name=""
           id=""
           className={
@@ -58,7 +58,7 @@ const Header = () => {
         >
           <option value="0">English</option>
           <option value="1">中文</option>
-        </select>
+        </select> */}
       </div>
     </section>
   );

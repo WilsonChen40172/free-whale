@@ -50,7 +50,7 @@ const LeetCode38 = () => {
           sequence of integers will be represented as a string.
         </p>
       </div>
-      <div className="leetCodeAnswer">
+      <div className={"leetCodeAnswer " + style.leetCodeTopic}>
         <div className="inputTable">
           <div className="half mb-3">
             <input

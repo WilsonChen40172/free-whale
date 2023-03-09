@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import style from "../LeetCode.module.scss";
 import { Link } from "react-router-dom";
 
-const LeetCode242 = () => {
+const LeetCodeHome = () => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode Home";
@@ -10,6 +10,9 @@ const LeetCode242 = () => {
 
   return (
     <div className={style.leetCode}>
+      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/14"}>
+        No.14
+      </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/38"}>
         No.38
       </Link>
@@ -29,4 +32,4 @@ const LeetCode242 = () => {
   );
 };
 
-export default LeetCode242;
+export default LeetCodeHome;

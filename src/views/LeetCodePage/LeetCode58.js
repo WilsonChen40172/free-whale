@@ -26,7 +26,7 @@ const LeetCode58 = () => {
 
   return (
     <div className={style.leetCode}>
-      <h2>LeetCode 58. Valid Anagram.</h2>
+      <h2>LeetCode 58. Length of Last Word.</h2>
       <div className="leetCodeTopic">
         <p>
           Given a string s consists of upper/lower-case alphabets and empty

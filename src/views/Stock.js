@@ -22,16 +22,16 @@ const Stock = () => {
 
   //預設語言包
   const languageDefault = {
-    gr: "Golden Ratio",
-    maxNumber: "Highest Price",
-    minNumber: "Lowest Price",
-    reference: "Reference",
-    pc: "Pensions Calculate",
-    moneyYear: "money/Year",
-    py: "％/Year",
-    whenYear: "WhenYear",
-    endMoney: "years ago money",
-  }
+    gr: "黃金分割率",
+    maxNumber: "最高股價",
+    minNumber: "最低股價",
+    reference: "合理價",
+    pc: "退休金計算",
+    moneyYear: "一年存多少",
+    py: "一年多少％",
+    whenYear: "存幾年",
+    endMoney: "年後存錢",
+  };
   //語言包
   const [languageBag, setLanguageBag] = useState(languageDefault);
 
@@ -39,8 +39,6 @@ const Stock = () => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "Stock";
-    // console.log(parseFloat(1.4000000000000001.toPrecision(12)) === 1.4);  // True)
-    // changeLanguage("0");
   }, []);
 
   const calculation = () => {
@@ -69,15 +67,15 @@ const Stock = () => {
         break;
       case "1":
         setLanguageBag({
-          gr: "黃金分割率",
-          maxNumber: "最高股價",
-          minNumber: "最低股價",
-          reference: "合理價",
-          pc: "退休金計算",
-          moneyYear: "一年存多少",
-          py: "一年多少％",
-          whenYear: "存幾年",
-          endMoney: "年後存錢",
+          gr: "Golden Ratio",
+          maxNumber: "Highest Price",
+          minNumber: "Lowest Price",
+          reference: "Reference",
+          pc: "Pensions Calculate",
+          moneyYear: "money/Year",
+          py: "％/Year",
+          whenYear: "WhenYear",
+          endMoney: "years ago money",
         });
         break;
 
@@ -99,14 +97,14 @@ const Stock = () => {
               id=""
               className="form-select stock-input-style"
             >
-              <option value="0">English</option>
-              <option value="1">繁體中文</option>
+              <option value="0">繁體中文</option>
+              <option value="1">English</option>
             </select>
           </div>
         </div>
         <p className="title">{languageBag.gr}</p>
         <div className="inputBox">
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <div className={style["input-group-prepend"]}>
               <label className="input-group-text" htmlFor="maxNumber">
                 {languageBag.maxNumber}
@@ -118,10 +116,12 @@ const Stock = () => {
               placeholder={languageBag.maxNumber}
               onChange={(e) => setMaxNumber(e.target.value)}
               value={maxNumber}
-              className={"form-control stock-input-style "+style['stock-input-style']}
+              className={
+                "form-control stock-input-style " + style["stock-input-style"]
+              }
             />
           </div>
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <div className={style["input-group-prepend"]}>
               <label className="input-group-text" htmlFor="minNumber">
                 {languageBag.minNumber}
@@ -133,10 +133,12 @@ const Stock = () => {
               placeholder={languageBag.minNumber}
               onChange={(e) => setMinNumber(e.target.value)}
               value={minNumber}
-              className={"form-control stock-input-style "+style['stock-input-style']}
+              className={
+                "form-control stock-input-style " + style["stock-input-style"]
+              }
             />
           </div>
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <div className={style["input-group-prepend"]}>
               <label className="input-group-text">{languageBag.gr}</label>
             </div>
@@ -144,14 +146,16 @@ const Stock = () => {
               name=""
               id=""
               onChange={(e) => setGoldenSection(e.target.value)}
-              className={"form-select stock-input-style "+style['stock-input-style']}
+              className={
+                "form-select stock-input-style " + style["stock-input-style"]
+              }
             >
               {controlGsArray.map((value) => (
                 <option value={value}>{value}</option>
               ))}
             </select>
           </div>
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <span className="pt-2">
               {languageBag.reference}:
               {maxNumber - (maxNumber - minNumber) * goldenSection}
@@ -163,7 +167,7 @@ const Stock = () => {
       <div id="retire" className="section">
         <p className="title">{languageBag.pc}</p>
         <div className="inputBox">
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <div className={style["input-group-prepend"]}>
               <label className="input-group-text" htmlFor="moneyYear">
                 {languageBag.moneyYear}
@@ -175,10 +179,12 @@ const Stock = () => {
               placeholder={languageBag.moneyYear}
               onChange={(e) => setMoneyYear(e.target.value)}
               value={moneyYear}
-              className={"form-control stock-input-style "+style['stock-input-style']}
+              className={
+                "form-control stock-input-style " + style["stock-input-style"]
+              }
             />
           </div>
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <div className={style["input-group-prepend"]}>
               <label className="input-group-text" htmlFor="percentYear">
                 {languageBag.py}
@@ -190,10 +196,12 @@ const Stock = () => {
               placeholder={languageBag.py}
               onChange={(e) => setPercentYear(e.target.value)}
               value={percentYear}
-              className={"form-control stock-input-style "+style['stock-input-style']}
+              className={
+                "form-control stock-input-style " + style["stock-input-style"]
+              }
             />
           </div>
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <div className={style["input-group-prepend"]}>
               <label className="input-group-text" htmlFor="whenYear">
                 {languageBag.whenYear}
@@ -205,10 +213,12 @@ const Stock = () => {
               placeholder={languageBag.whenYear}
               onChange={(e) => setWhenYear(e.target.value)}
               value={whenYear}
-              className={"form-control stock-input-style "+style['stock-input-style']}
+              className={
+                "form-control stock-input-style " + style["stock-input-style"]
+              }
             />
           </div>
-          <div className={"input-group "+style['input-group-half']}>
+          <div className={"input-group " + style["input-group-half"]}>
             <span className="pt-2">
               {whenYear}
               {languageBag.endMoney}:{calculation()}

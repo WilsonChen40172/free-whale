@@ -40,7 +40,7 @@ const LeetCode38 = () => {
 
   return (
     <div className={style.leetCode}>
-      <h2>LeetCode 38. Valid Anagram.</h2>
+      <h2>LeetCode 38. Count and Say.</h2>
       <div className="leetCodeTopic">
         <p>
           The count-and-say sequence is the sequence of integers beginning as

@@ -22,7 +22,7 @@ const LeetCode344 = () => {
 
   return (
     <div className={style.leetCode}>
-      <h2>LeetCode 344. Valid Anagram.</h2>
+      <h2>LeetCode 344. Reverse String.</h2>
       <div className="leetCodeTopic">
         <p>
           Write a function that takes a string as input and returns the string

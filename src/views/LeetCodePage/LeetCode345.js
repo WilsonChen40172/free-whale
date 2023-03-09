@@ -35,7 +35,7 @@ const LeetCode345 = () => {
 
   return (
     <div className={style.leetCode}>
-      <h2>LeetCode 345. Valid Anagram.</h2>
+      <h2>LeetCode 345. Reverse Vowels of a String.</h2>
       <div className="leetCodeTopic">
         <p>
           Write a function that takes a string as input and reverse only the

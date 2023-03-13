@@ -2,49 +2,70 @@ import React, { useEffect, useState } from "react";
 import style from "../LeetCode.module.scss";
 import { Link } from "react-router-dom";
 
-const LeetCode14 = () => {
+const LeetCode67 = () => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
-    document.title = "LeetCode14";
-    compare();
+    document.title = "LeetCode67";
+    
   });
 
-  const [inputStringA, setInputStringA] = useState("abcd");
-  const [inputStringB, setInputStringB] = useState("abccc");
-  const [inputStringC, setInputStringC] = useState("abdec");
+  const [inputStringA, setInputStringA] = useState("1110");
+  const [inputStringB, setInputStringB] = useState("101");
   const [result, setResult] = useState("");
 
   const compare = () => {
-    const thisArray = [inputStringA, inputStringB, inputStringC];
-    //拿來比對的資料
-    let firstCount = thisArray[0];
+    //單純轉譯 沒解完 再加油好嗎 :)
+    var sumStr = "";
+    var carry = 0;
+    var longStr, shortStr;
+    if (inputStringA.length > inputStringB.length) {
+      longStr = inputStringA;
+      shortStr = inputStringB;
+    } else {
+      longStr = inputStringB;
+      shortStr = inputStringA;
+    }
+    longStr = longStr.split("").reverse().join("");
+    shortStr = shortStr.split("").reverse().join("");
 
-    for (
-      let indexAllData = 0;
-      indexAllData < thisArray.length;
-      indexAllData++
-    ) {
-      for (
-        let indexDataLength = 0;
-        indexDataLength < thisArray[indexAllData].length;
-        indexDataLength++
-      ) {
-        if (
-          firstCount.slice(0, indexDataLength) ===
-          thisArray[indexAllData].slice(0, indexDataLength)
-        ) {
-        } else {
-          firstCount = firstCount.slice(0, indexDataLength - 1);
-        }
+    for (let index = 0; index < shortStr.length; index++) {
+      var c =
+        parseInt(shortStr.charAt(index)) +
+        parseInt(longStr.charAt(index)) +
+        carry;
+      if (c > 1) {
+        carry = 1;
+        c = c % 2;
+      } else {
+        carry = 0;
       }
+
+      sumStr = c + sumStr;
     }
 
-    setResult(firstCount);
+    for (
+      var indexLong = shortStr.length;
+      indexLong < longStr.length;
+      indexLong++
+    ) {
+      var c = parseInt(longStr.charAt(indexLong)) + carry;
+      if (c > 1) {
+        carry = 1;
+        c = c % 2;
+      } else {
+        carry = 0;
+      }
+      sumStr = c + sumStr;
+    }
+
+    const lastResult = (carry === 1 ? carry : "") + sumStr;
+
+    setResult(lastResult);
   };
 
   return (
     <div className={style.leetCode}>
-      <h2>LeetCode 14. Longest Common Prefix.</h2>
+      <h2>LeetCode 67. Add Binary</h2>
       <div className="leetCodeTopic">
         <p>
           Write a function to find the longest common prefix string amongst an
@@ -69,14 +90,6 @@ const LeetCode14 = () => {
               onChange={(event) => setInputStringB(event.target.value)}
             />
           </div>
-          <div className="half mb-3">
-            <input
-              type="text"
-              className="form-control"
-              value={inputStringC}
-              onChange={(event) => setInputStringC(event.target.value)}
-            />
-          </div>
         </div>
 
         <button onClick={compare} className="btn defaultButton mb-3">
@@ -91,4 +104,4 @@ const LeetCode14 = () => {
   );
 };
 
-export default LeetCode14;
+export default LeetCode67;

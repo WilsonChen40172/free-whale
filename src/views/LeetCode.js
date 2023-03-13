@@ -4,6 +4,7 @@ import LeetCodeHome from "./LeetCodePage/LeetCodeHome";
 import LeetCode14 from "./LeetCodePage/LeetCode14";
 import LeetCode38 from "./LeetCodePage/LeetCode38";
 import LeetCode58 from "./LeetCodePage/LeetCode58";
+import LeetCode67 from "./LeetCodePage/LeetCode67";
 import LeetCode242 from "./LeetCodePage/LeetCode242";
 import LeetCode344 from "./LeetCodePage/LeetCode344";
 import LeetCode345 from "./LeetCodePage/LeetCode345";
@@ -34,6 +35,8 @@ const LeetCode = () => {
       return <LeetCode38></LeetCode38>;
     case "58":
       return <LeetCode58></LeetCode58>;
+    case "67":
+      return <LeetCode67></LeetCode67>;
     case "242":
       return <LeetCode242></LeetCode242>;
     case "344":

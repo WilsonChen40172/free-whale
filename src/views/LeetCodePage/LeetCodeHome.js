@@ -22,6 +22,9 @@ const LeetCodeHome = () => {
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/67"}>
         No.67
       </Link>
+      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/125"}>
+        No.125
+      </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/242"}>
         No.242
       </Link>

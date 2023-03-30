@@ -10,29 +10,32 @@ const LeetCodeHome = () => {
 
   return (
     <div className={style.leetCode}>
+      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/1"}>
+        No.1 比對相等兩數字相加
+      </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/14"}>
-        No.14
+        No.14 找共同字串
       </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/38"}>
-        No.38
+        No.38 幾個數字幾個數字幾個數字
       </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/58"}>
-        No.58
+        No.58 最後一個單詞的長度
       </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/67"}>
-        No.67
+        No.67 二進制相加
       </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/125"}>
-        No.125
+        No.125 字串是否回文
       </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/242"}>
-        No.242
+        No.242 比較兩個字串是否回文
       </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/344"}>
-        No.344
+        No.344 字串反轉
       </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/345"}>
-        No.345
+        No.345 母音反向代回
       </Link>
     </div>
   );

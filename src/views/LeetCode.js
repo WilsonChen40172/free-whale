@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import LeetCodeHome from "./LeetCodePage/LeetCodeHome";
+import LeetCode1 from "./LeetCodePage/LeetCode1";
 import LeetCode14 from "./LeetCodePage/LeetCode14";
 import LeetCode38 from "./LeetCodePage/LeetCode38";
 import LeetCode58 from "./LeetCodePage/LeetCode58";
@@ -24,6 +25,8 @@ const LeetCode = () => {
   const { topicNumber } = useParams();
 
   switch (topicNumber) {
+    case "1":
+      return <LeetCode1></LeetCode1>;
     case "14":
       return <LeetCode14></LeetCode14>;
     case "38":

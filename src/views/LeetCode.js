@@ -11,6 +11,8 @@ import LeetCode242 from "./LeetCodePage/LeetCode242";
 import LeetCode344 from "./LeetCodePage/LeetCode344";
 import LeetCode345 from "./LeetCodePage/LeetCode345";
 
+import Map from "./LeetCodePage/Map";
+
 const LeetCode = () => {
   // const [parsed, setParsed] = useState("");
 
@@ -43,6 +45,8 @@ const LeetCode = () => {
       return <LeetCode344></LeetCode344>;
     case "345":
       return <LeetCode345></LeetCode345>;
+    case "Map":
+      return <Map></Map>;
     default:
       return <LeetCodeHome></LeetCodeHome>;
   }

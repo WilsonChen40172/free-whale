@@ -44,6 +44,12 @@ const F2E = () => {
           <Link to={"/f2e/LeetCode/0"}>LeetCode</Link>
         </div>
       </div>
+      <div className="section">
+        <div className="text-center p-4">
+          <Link to={"/f2e/LeetCode/Map"}>Map</Link>
+        </div>
+      </div>
+      
     </div>
   );
 };

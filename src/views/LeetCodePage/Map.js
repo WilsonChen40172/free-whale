@@ -6,11 +6,10 @@ const Map = () => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode Map";
-    compare();
+    console.log(compare());
   });
 
   const compare = () => {
-    console.log("dd");
     const kvArray = [
       { key: 1, value: 10 },
       { key: 2, value: 20 },
@@ -21,7 +20,7 @@ const Map = () => {
       rObj[object.key] = object.value * 2;
       return rObj;
     });
-    console.log(afterObject);
+    return afterObject;
   };
 
   return <div className={style.leetCode}></div>;

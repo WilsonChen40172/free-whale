@@ -13,6 +13,9 @@ const LeetCodeHome = () => {
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/1"}>
         No.1 比對相等兩數字相加
       </Link>
+      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/7"}>
+        No.7 反轉INT整數
+      </Link>
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/14"}>
         No.14 找共同字串
       </Link>

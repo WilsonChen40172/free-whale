@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import LeetCodeHome from "./LeetCodePage/LeetCodeHome";
+import Map from "./LeetCodePage/Map";
+
 import LeetCode1 from "./LeetCodePage/LeetCode1";
 import LeetCode14 from "./LeetCodePage/LeetCode14";
 import LeetCode38 from "./LeetCodePage/LeetCode38";
@@ -10,8 +12,7 @@ import LeetCode125 from "./LeetCodePage/LeetCode125";
 import LeetCode242 from "./LeetCodePage/LeetCode242";
 import LeetCode344 from "./LeetCodePage/LeetCode344";
 import LeetCode345 from "./LeetCodePage/LeetCode345";
-
-import Map from "./LeetCodePage/Map";
+import LeetCode7 from "./LeetCodePage/LeetCode7";
 
 const LeetCode = () => {
   // const [parsed, setParsed] = useState("");
@@ -29,6 +30,8 @@ const LeetCode = () => {
   switch (topicNumber) {
     case "1":
       return <LeetCode1></LeetCode1>;
+    case "7":
+      return <LeetCode7></LeetCode7>;
     case "14":
       return <LeetCode14></LeetCode14>;
     case "38":

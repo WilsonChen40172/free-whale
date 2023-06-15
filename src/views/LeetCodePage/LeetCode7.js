@@ -8,24 +8,35 @@ const LeetCode7 = () => {
     document.title = "LeetCode7";
   });
 
-  const [inputString, setInputString] = useState(0);
+  const [inputNum, setInputNum] = useState(0);
   const [result, setResult] = useState(0);
 
   const compare = () => {
-    let nowNum = inputString;
-    let returnNum = 0;
-    nowNum = nowNum.split("").reverse();
-    // console.log(nowNum);
-    // console.log(nowNum.length);
-    // console.log(nowNum[nowNum.length - 1]);
-    if (nowNum[nowNum.length - 1] === "-") {
-      // unshift
-      nowNum.pop();
-      nowNum.unshift("-");
+    let minusSwitch = false;
+    let nowNum = inputNum;
+    // //個位數不處理 回傳相同
+    if(nowNum < 10 && nowNum > -10){
+      setResult(nowNum);
+      return false;
     }
-    // console.log(nowNum);
-    returnNum = nowNum;
-    setResult(returnNum);
+
+    if (nowNum > 0) {
+      //直接反轉
+      nowNum = nowNum.toString();
+      nowNum = nowNum.split("").reverse().join("");
+    } else {
+      //成負一後反轉
+      nowNum *= -1;
+      nowNum = nowNum.toString();
+      nowNum = nowNum.split("").reverse().join("");
+      minusSwitch = true;
+    }
+    if (minusSwitch) {
+      nowNum = "-" + nowNum;
+    }
+
+    console.log(parseInt(nowNum));
+    setResult(parseInt(nowNum));
   };
 
   return (
@@ -50,8 +61,8 @@ const LeetCode7 = () => {
             <input
               type="number"
               className="form-control"
-              value={inputString}
-              onChange={(event) => setInputString(event.target.value)}
+              value={inputNum}
+              onChange={(event) => setInputNum(event.target.value)}
             />
           </div>
           <div className="half mb-3"></div>

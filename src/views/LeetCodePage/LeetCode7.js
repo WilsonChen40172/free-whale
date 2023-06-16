@@ -12,10 +12,9 @@ const LeetCode7 = () => {
   const [result, setResult] = useState(0);
 
   const compare = () => {
-    let minusSwitch = false;
     let nowNum = inputNum;
     // //個位數不處理 回傳相同
-    if(nowNum < 10 && nowNum > -10){
+    if (nowNum < 10 && nowNum > -10) {
       setResult(nowNum);
       return false;
     }
@@ -25,17 +24,14 @@ const LeetCode7 = () => {
       nowNum = nowNum.toString();
       nowNum = nowNum.split("").reverse().join("");
     } else {
-      //成負一後反轉
+      //成負一後反轉 加回負號
       nowNum *= -1;
       nowNum = nowNum.toString();
       nowNum = nowNum.split("").reverse().join("");
-      minusSwitch = true;
-    }
-    if (minusSwitch) {
       nowNum = "-" + nowNum;
     }
 
-    console.log(parseInt(nowNum));
+    // console.log(parseInt(nowNum));
     setResult(parseInt(nowNum));
   };
 

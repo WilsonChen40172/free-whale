@@ -15,6 +15,30 @@ const F2E = () => {
     };
   }, []);
 
+  // const testClass = () => {
+  //   class Car {
+  //     constructor(carObject) {
+  //       this.height = carObject.height;
+  //       this.width = carObject.width;
+  //     }
+  //     // Getter
+  //     get area() {
+  //       return this.calcArea();
+  //     }
+  //     // Method
+  //     calcArea() {
+  //       return this.height * this.width;
+  //     }
+  //     get stop() {
+  //       return this.stopMethod();
+  //     }
+  //     stopMethod() {}
+  //   }
+
+  //   var p = new Car({ height: 10, width: 10 });
+  //   console.log(p.area);
+  // };
+
   return (
     <div className="F2E flex-all-center vh-100">
       <div className="section" style={{ display: "none" }}>

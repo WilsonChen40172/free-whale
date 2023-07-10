@@ -4,6 +4,32 @@ import { Counter } from "../features/counter/Counter";
 import style from "./F2E.module.scss";
 import { Link } from "react-router-dom";
 
+const testClass = () => {
+  class Car {
+    constructor(carObject) {
+      this.height = carObject.height;
+      this.width = carObject.width;
+    }
+    // Getter
+    get area() {
+      return this.calcArea();
+    }
+    // Method
+    calcArea() {
+      return this.height * this.width;
+    }
+    get stop() {
+      return this.stopMethod();
+    }
+    stopMethod() {}
+  }
+
+  var p = new Car({ height: 10, width: 10 });
+  console.log(p.area);
+};
+
+testClass();
+
 const F2E = () => {
   const [number, setNumber] = useState(0);
 
@@ -14,30 +40,6 @@ const F2E = () => {
       //will mount
     };
   }, []);
-
-  // const testClass = () => {
-  //   class Car {
-  //     constructor(carObject) {
-  //       this.height = carObject.height;
-  //       this.width = carObject.width;
-  //     }
-  //     // Getter
-  //     get area() {
-  //       return this.calcArea();
-  //     }
-  //     // Method
-  //     calcArea() {
-  //       return this.height * this.width;
-  //     }
-  //     get stop() {
-  //       return this.stopMethod();
-  //     }
-  //     stopMethod() {}
-  //   }
-
-  //   var p = new Car({ height: 10, width: 10 });
-  //   console.log(p.area);
-  // };
 
   return (
     <div className="F2E flex-all-center vh-100">

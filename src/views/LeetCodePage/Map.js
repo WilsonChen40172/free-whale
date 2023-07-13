@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import style from "../LeetCode.module.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Map = () => {
   useEffect(() => {

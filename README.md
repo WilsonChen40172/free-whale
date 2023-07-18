@@ -57,3 +57,11 @@ You should use terminal : npm install node-sass sass-loader --save(MacOs)
 npm i --save @fortawesome/react-fontawesome@latest
 社群app相關icon:
 npm i --save @fortawesome/free-brands-svg-icons
+
+## deploy 直接用指令部署上gh-pages
+
+npm install gh-pages
+npm run build
+package.json -> scripts -> "deploy": "gh-pages -d build" // 增加這一行
+npm run deploy
+Published就代表部署成功

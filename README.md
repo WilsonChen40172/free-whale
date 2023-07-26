@@ -65,3 +65,5 @@ npm run build
 package.json -> scripts -> "deploy": "gh-pages -d build" // 增加這一行
 npm run deploy
 Published就代表部署成功
+package.json -> scripts -> "deploy": "react-scripts build && gh-pages -d build"
+先build後部署

@@ -149,6 +149,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-weight: bold;
+  overflow-x: hidden;
 }
 
 h1,
@@ -265,8 +266,9 @@ p {
 //pad
 @media screen and (max-width: 1024px) {
   .App {
-    margin-top: 4rem;
+    // margin-top: 4rem;
     margin-left: 0;
+    overflow-x: hidden;
   }
 }
 //隱藏input number右邊醜按鈕

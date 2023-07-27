@@ -28,7 +28,6 @@
       p {
         color: rgba(255, 255, 255, 0.55);
       }
-      
     }
     .mask {
       position: absolute;
@@ -37,6 +36,17 @@
 
       z-index: 5;
       top: 0;
+    }
+  }
+}
+
+//pad
+@media screen and (max-width: 1024px) {
+  .imgWall {
+    .picCard {
+      .img {
+        height: auto;
+      }
     }
   }
 }

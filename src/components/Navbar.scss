@@ -1,6 +1,21 @@
 .dots {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  // position: absolute;
+  // right: 10px;
+  // top: 10px;
+  svg{
+    width:32px;
+    text-align: center;
+  }
 }
 
+.navbar {
+  display: none;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    display: block;
+    padding: 0.5rem;
+  }
+}

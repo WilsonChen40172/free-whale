@@ -80,16 +80,21 @@
 
 //pad
 @media screen and (max-width: 1024px) {
+  body{
+    overflow-x: hidden;
+  }
   .header {
-    width: 100%;
-    height: 4rem;
+    // width: 100%;
+    // height: 4rem;
+    position: absolute;
+    left: -320px;
   }
-  .headerList {
-    ul {
-      display: flex;
-      li {
-        text-align: center;
-      }
-    }
-  }
+  // .headerList {
+  //   ul {
+  //     display: flex;
+  //     li {
+  //       text-align: center;
+  //     }
+  //   }
+  // }
 }

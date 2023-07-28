@@ -1,4 +1,5 @@
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 // import GlobalMethod from "../global/GlobalMethod";
 import Home from "../views/Home";
@@ -11,10 +12,22 @@ import Navbar from "../components/Navbar";
 import UserForm from "../views/UserForm";
 
 function RouteSetting() {
+  const [headerSwitch, setHeaderSwitch] = useState(true);
+  const changeHeaderSwitch = () => {
+    const thisSwitchBoolean = headerSwitch;
+    setHeaderSwitch(!thisSwitchBoolean);
+    // console.log(headerSwitch);
+  };
   return (
     <HashRouter>
-      <Navbar></Navbar>
-      <Header></Header>
+      <Navbar
+        changeHeaderSwitch={ changeHeaderSwitch }
+        headerSwitch={ headerSwitch }
+      ></Navbar>
+      <Header
+        changeHeaderSwitch={ changeHeaderSwitch }
+        headerSwitch={ headerSwitch }
+      ></Header>
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/stock"} element={<Stock />} />

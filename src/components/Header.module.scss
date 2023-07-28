@@ -80,14 +80,19 @@
 
 //pad
 @media screen and (max-width: 1024px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .header {
     // width: 100%;
     // height: 4rem;
     position: absolute;
-    left: -320px;
+    transition: 0.5s all;
+    width: 160px;
+    left: -160px;
+  }
+  .header.active {
+    left: 0px;
   }
   // .headerList {
   //   ul {

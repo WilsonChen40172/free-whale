@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import style from "./Header.module.scss";
 import { useLocation } from "react-router-dom";
 
-const Header = () => {
-  const [thisRoute, setThisRoute] = useState("123");
+const Header = (props) => {
+  const [thisRoute, setThisRoute] = useState("");
   // const history = useHistory();
   const location = useLocation();
   // console.log(location);
@@ -15,10 +15,15 @@ const Header = () => {
     setThisRoute(location.pathname);
   }, [location]);
 
+  const closeHeader = () =>{
+    props.changeHeaderSwitch();
+  }
+
   return (
-    <section className={style.header}>
+    <section className={style.header + " " + (props.headerSwitch ? "" : style.active) }>
+      {/* + " " + (props.headerSwitch.headerSwitch ? "" : style.active) */}
       <div className={style.headerList}>
-        <ul className="">
+        <ul className="" onClick={closeHeader}>
           <li className={thisRoute === "/" ? style.active : ""}>
             <Link className={thisRoute === "/" ? " " : ""} to={"/"}>
               Home

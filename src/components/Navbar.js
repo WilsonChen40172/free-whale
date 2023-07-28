@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -10,11 +10,15 @@ const Navbar = (props) => {
     props.changeHeaderSwitch();
     // console.log(props.headerSwitch);
     if (props.headerSwitch) {
-      setDotsStyle(faXmark);
-    } else {
       setDotsStyle(faList);
+    } else {
+      setDotsStyle(faXmark);
     }
   };
+  useEffect(() => {
+    headerFunction();
+  });
+
   return (
     <div className="navbar">
       {/* style={{ display: "none" }} */}

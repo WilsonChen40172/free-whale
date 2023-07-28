@@ -15,15 +15,13 @@ const Header = (props) => {
     setThisRoute(location.pathname);
   }, [location]);
 
-  const closeHeader = () =>{
-    props.changeHeaderSwitch();
-  }
-
   return (
-    <section className={style.header + " " + (props.headerSwitch ? "" : style.active) }>
+    <section
+      className={style.header + " " + (props.headerSwitch ? style.active : "")}
+    >
       {/* + " " + (props.headerSwitch.headerSwitch ? "" : style.active) */}
       <div className={style.headerList}>
-        <ul className="" onClick={closeHeader}>
+        <ul className="">
           <li className={thisRoute === "/" ? style.active : ""}>
             <Link className={thisRoute === "/" ? " " : ""} to={"/"}>
               Home

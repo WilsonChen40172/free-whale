@@ -151,7 +151,9 @@ const Stock = () => {
               }
             >
               {controlGsArray.map((value) => (
-                <option value={value}>{value}</option>
+                <option key={value} value={value}>
+                  {value}
+                </option>
               ))}
             </select>
           </div>

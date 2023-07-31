@@ -3,8 +3,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Header.module.scss";
 import { useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  headerSwitchChange,
+  selectHeaderSwitch,
+} from "../features/counter/counterSlice";
 
-const Header = (props) => {
+const Header = () => {
   const [thisRoute, setThisRoute] = useState("");
   // const history = useHistory();
   const location = useLocation();
@@ -15,20 +20,29 @@ const Header = (props) => {
     setThisRoute(location.pathname);
   }, [location]);
 
+  const headerSwitch = useSelector(selectHeaderSwitch);
+  const dispatch = useDispatch();
+
   return (
     <section
-      className={style.header + " " + (props.headerSwitch ? style.active : "")}
+      className={style.header + " " + (headerSwitch ? style.active : "")}
     >
       {/* + " " + (props.headerSwitch.headerSwitch ? "" : style.active) */}
       <div className={style.headerList}>
         <ul className="">
           <li className={thisRoute === "/" ? style.active : ""}>
-            <Link className={thisRoute === "/" ? " " : ""} to={"/"}>
+            <Link
+              className={thisRoute === "/" ? " " : ""}
+              to={"/"}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
               Home
             </Link>
           </li>
           <li className={thisRoute === "/stock" ? style.active : ""}>
-            <Link to={"/stock"}>Stock</Link>
+            <Link to={"/stock"} onClick={() => dispatch(headerSwitchChange())}>
+              Stock
+            </Link>
           </li>
           <li
             className={
@@ -39,7 +53,11 @@ const Header = (props) => {
                 : ""
             }
           >
-            <Link to={"/F2E"} className={thisRoute === "/F2E" ? " " : ""}>
+            <Link
+              to={"/F2E"}
+              className={thisRoute === "/F2E" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
               F2E
             </Link>
           </li>
@@ -47,6 +65,7 @@ const Header = (props) => {
             <Link
               to={"/Classic"}
               className={thisRoute === "/Classic" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
             >
               Classic
             </Link>

@@ -10,6 +10,7 @@ import LeetCode from "../views/LeetCode";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import UserForm from "../views/UserForm";
+import ReduxExample from "../ReduxExample";
 
 function RouteSetting() {
   const [headerSwitch, setHeaderSwitch] = useState(true);
@@ -35,6 +36,7 @@ function RouteSetting() {
         <Route path={"*"} element={<NotFound />} />
         <Route path={"/f2e/LeetCode/:topicNumber"} element={<LeetCode />} />
         <Route path={"/f2e/UserForm"} element={<UserForm />} />
+        <Route path={"/f2e/Redux"} element={<ReduxExample />} />
       </Routes>
     </HashRouter>
   );

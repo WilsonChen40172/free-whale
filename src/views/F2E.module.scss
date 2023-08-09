@@ -69,3 +69,21 @@
     calc(60 * var(--coefficient, 1px)) calc(80 * var(--coefficient, 1px)) 0 0
       #2ecc71;
 }
+
+.F2E {
+  .section {
+    a {
+      margin: 10px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0);
+      display: inline-block;
+      width: fit-content;
+      padding-bottom: 4px;
+      transition: border 0.2s;
+    }
+    a:hover {
+      border-bottom: 2px solid #fff;
+    }
+  }
+}

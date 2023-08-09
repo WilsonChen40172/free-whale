@@ -68,7 +68,7 @@ const LeetCode38 = () => {
         <font className="d-block" size="3">
           Result:<span>{result}</span>
         </font>
-        <Link to={"/f2e/LeetCode/0"}>Back</Link>
+        <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/0"}>Back</Link>
       </div>
     </div>
   );

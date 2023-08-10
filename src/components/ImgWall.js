@@ -9,7 +9,20 @@ const ImgWall = () => {
       <div className={style.picCard}>
         <div className={style.mask}></div>
         <div className={style.img}>
-          <img src="https://i.imgur.com/mRviZyI.jpg" alt="wilsonPic" />
+          <img src="https://i.imgur.com/pe2rsCK.jpg" alt="whalePic" />
+        </div>
+        <div className={style.text}>
+          <h2>My All Life</h2>
+          <p>About My All Life</p>
+          <a href="/" className="defaultButton">
+            About My All Life.
+          </a>
+        </div>
+      </div>
+      <div className={style.picCard}>
+        <div className={style.mask}></div>
+        <div className={style.img}>
+          <img src="https://i.imgur.com/mRviZyI.jpg" alt="whalePic" />
         </div>
         <div className={style.text}>
           <h2>Front End Engineer Life</h2>
@@ -22,26 +35,13 @@ const ImgWall = () => {
       <div className={style.picCard}>
         <div className={style.mask}></div>
         <div className={style.img}>
-          <img src="https://i.imgur.com/pe2rsCK.jpg" alt="wilsonPic" />
-        </div>
-        <div className={style.text}>
-          <h2>Skateboard Life</h2>
-          <p>About My Skateboard Life</p>
-          <a href="/" className="defaultButton">
-            About Skate.
-          </a>
-        </div>
-      </div>
-      <div className={style.picCard}>
-        <div className={style.mask}></div>
-        <div className={style.img}>
-          <img src="https://i.imgur.com/Bj1UIAX.jpg" alt="wilsonPic" />
+          <img src="https://i.imgur.com/Bj1UIAX.jpg" alt="whalePic" />
         </div>
         <div className={style.text}>
           <h2>Dance Life</h2>
           <p>About My Dance Life</p>
           <a href="/" className="defaultButton">
-            About Dance.
+            About My Dance.
           </a>
         </div>
       </div>

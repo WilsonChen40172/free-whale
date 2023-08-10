@@ -23,7 +23,7 @@ const Home = () => {
       <section className={style.about}>
         <div className={style.text}>
           <h1 className={style.title}>Free Whale</h1>
-          <p className={style.introduce}>Coding Dance Invest SkateBoard </p>
+          <p className={style.introduce}>Frond-End Engineer. Dancer. Creator. </p>
           <div className={style.community}>
             <a
               href="https://www.instagram.com/whale.js"

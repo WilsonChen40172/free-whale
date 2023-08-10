@@ -73,6 +73,11 @@ const F2E = () => {
           <Counter />
         </div>
       </div>
+      <div className={style.section}>
+        <div className="text-center p-4">
+          <Link to={"/f2e/AudioEffects"}>Audio Effects</Link>
+        </div>
+      </div>
       <div className={style.section} style={{ display: "none" }}>
         <p>css一行+一個div產生圖片</p>
         <div className="position-relative">

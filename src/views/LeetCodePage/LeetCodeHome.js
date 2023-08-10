@@ -40,7 +40,7 @@ const LeetCodeHome = () => {
       <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/345"}>
         No.345 母音反向代回
       </Link>
-      <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/0"}>
+      <Link className={style.leetCodeTitle} to={"/f2e"}>
         Back
       </Link>
     </div>

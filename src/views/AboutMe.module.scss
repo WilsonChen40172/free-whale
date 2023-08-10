@@ -1,25 +1,68 @@
 .AboutMe {
   padding: 4em 4em 2em 4em;
+  .sixTable {
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    section {
+      padding: 10px;
+      border: solid 1px rgba(255, 255, 255, 0.15);
+      width: 50%;
+      padding: 3.5em 3em 1em 7em;
+      position: relative;
+      span {
+        font-size: 1.3em;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        left: 3em;
+        top: 3em;
+        width: 40px;
+        height: 40px;
+        background: #ffffff;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #b74e91;
+          cursor: unset;
+        }
+      }
+      h3 {
+        font-size: 22px;
+        padding: 8px 8px 0 0;
+        margin-bottom: 0;
+      }
+      p {
+        padding: 0 8px 8px 0;
+        margin: 0 0 2em 0;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+    }
+  }
 }
 
 .title {
   font-size: 1.75em;
   border: 0;
+  margin-bottom: 0.5em;
+  color: #fff;
 }
 
-.sixTable {
-  background: rgba(255, 255, 255, 0.05);
-  section {
-    padding: 10px;
-    border: solid 1px rgba(255, 255, 255, 0.15);
-    h3 {
-      font-size: 1.3em;
-      padding: 0 8px 8px 8px;
-      margin: 0;
-    }
-    p {
-      padding: 0 8px 8px 8px;
-      margin: 0;
+.text {
+  line-height: 1.75;
+}
+
+@media screen and (max-width: 991px) {
+  .AboutMe {
+    .sixTable {
+      section {
+        width: 100%;
+      }
     }
   }
 }

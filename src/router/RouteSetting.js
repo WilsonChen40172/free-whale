@@ -11,6 +11,7 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import UserForm from "../views/UserForm";
 import ReduxExample from "../ReduxExample";
+import AudioEffects from "../views/AudioEffects";
 
 function RouteSetting() {
   const [headerSwitch, setHeaderSwitch] = useState(true);
@@ -37,6 +38,7 @@ function RouteSetting() {
         <Route path={"/f2e/LeetCode/:topicNumber"} element={<LeetCode />} />
         <Route path={"/f2e/UserForm"} element={<UserForm />} />
         <Route path={"/f2e/Redux"} element={<ReduxExample />} />
+        <Route path={"/f2e/AudioEffects"} element={<AudioEffects />} />
       </Routes>
     </HashRouter>
   );

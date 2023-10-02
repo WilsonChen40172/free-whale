@@ -63,11 +63,6 @@ const F2E = () => {
           <Link to={"/f2e/LeetCode/Map"}>Map</Link>
         </div>
       </div>
-      <div className={style.section}>
-        <div className="text-center p-4">
-          <Link to={"/f2e/UserForm"}>User Form</Link>
-        </div>
-      </div>
       <div className={style.section} style={{ display: "none" }}>
         <div className="container">
           <Counter />

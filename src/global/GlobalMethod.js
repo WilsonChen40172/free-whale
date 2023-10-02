@@ -5,7 +5,7 @@ let productionLink = "";
 
 //判斷是否正式機
 if (window.location.hostname === "wilsonchen40172.github.io") {
-  // /myVideoReact
+  //
   productionLink = "/free-whale/build";
 } else {
   //

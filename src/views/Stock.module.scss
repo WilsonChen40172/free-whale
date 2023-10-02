@@ -3,6 +3,11 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  // background-image: url(https://assets.playgroundai.com/944030ef-6f90-4422-8119-b2366ad8422b.jpg);
+  background-size: cover;
+  // background-color: rgba(155, 36, 171, 0.4);
+  background-blend-mode: multiply;
+  background-position: center center;
 }
 
 .input-group-prepend {
@@ -39,6 +44,10 @@
 
 @media screen and (max-width: 991px) {
   .stock {
-    height: auto;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    max-width: unset;
   }
 }

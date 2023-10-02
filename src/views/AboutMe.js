@@ -17,7 +17,7 @@ const AboutMe = () => {
       <div className={"container " + style.AboutMe}>
         <p className={"title " + style.title}>What Can I Do For You?</p>
         <p className={style.text}>
-          以下有各種關於我自己的介紹，想合作可透過最上方各種社群網站連結找到我。或是有各種意見也可私訊我，虛心受教且保持進步。
+          以下有各種關於我自己的介紹，想合作可透過最上方各種社群網站連結找到我。
         </p>
         <div className={style.sixTable}>
           <section>

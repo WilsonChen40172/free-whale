@@ -11,6 +11,7 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import ReduxExample from "../ReduxExample";
 import AudioEffects from "../views/AudioEffects";
+import Map from "../views/Map";
 
 function RouteSetting() {
   const [headerSwitch, setHeaderSwitch] = useState(true);
@@ -22,12 +23,12 @@ function RouteSetting() {
   return (
     <HashRouter>
       <Navbar
-        changeHeaderSwitch={ changeHeaderSwitch }
-        headerSwitch={ headerSwitch }
+        changeHeaderSwitch={changeHeaderSwitch}
+        headerSwitch={headerSwitch}
       ></Navbar>
       <Header
-        changeHeaderSwitch={ changeHeaderSwitch }
-        headerSwitch={ headerSwitch }
+        changeHeaderSwitch={changeHeaderSwitch}
+        headerSwitch={headerSwitch}
       ></Header>
       <Routes>
         <Route path={"/"} element={<Home />} />
@@ -37,6 +38,7 @@ function RouteSetting() {
         <Route path={"/f2e/LeetCode/:topicNumber"} element={<LeetCode />} />
         <Route path={"/f2e/Redux"} element={<ReduxExample />} />
         <Route path={"/f2e/AudioEffects"} element={<AudioEffects />} />
+        <Route path={"/f2e/Map"} element={<Map />} />
       </Routes>
     </HashRouter>
   );

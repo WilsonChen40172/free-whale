@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import LeetCodeHome from "./LeetCodePage/LeetCodeHome";
-import Map from "./LeetCodePage/Map";
 
 import LeetCode1 from "./LeetCodePage/LeetCode1";
 import LeetCode14 from "./LeetCodePage/LeetCode14";
@@ -48,8 +47,6 @@ const LeetCode = () => {
       return <LeetCode344></LeetCode344>;
     case "345":
       return <LeetCode345></LeetCode345>;
-    case "Map":
-      return <Map></Map>;
     default:
       return <LeetCodeHome></LeetCodeHome>;
   }

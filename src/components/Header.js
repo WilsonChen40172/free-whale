@@ -1,4 +1,4 @@
-// import GlobalMethod from "../global/GlobalMethod";
+import GlobalMethod from "../global/GlobalMethod";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./Header.module.scss";
@@ -68,6 +68,18 @@ const Header = () => {
               onClick={() => dispatch(headerSwitchChange())}
             >
               Classic
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/Classic"}
+              className={thisRoute === "/Classic" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
+              {"Test GlobalFun"}
+              {/* 測試全域用function */}
+              {/* {GlobalMethod.getRandomRun(100, 300)} */}
+              {/* {GlobalMethod.lengthOfLongestSubstring("pwwkew")} */}
             </Link>
           </li>
         </ul>

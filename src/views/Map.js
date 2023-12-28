@@ -19,9 +19,11 @@ const Map = () => {
     let returnObj = [];
     oldData.map(function (object) {
       returnObj.push({ key: object.key, value: object.value * 2 });
+      return returnObj;
     });
     // console.log(returnObj);
     setConsoleData(returnObj);
+   
   };
 
   return (

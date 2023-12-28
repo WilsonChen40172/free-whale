@@ -20,7 +20,7 @@ const LeetCode38 = () => {
     //控制數量
     let counts = 1;
     //比對第幾個 預設第一個
-    let whatNum = inputString.charAt(0);
+    let whatNum = inputString.toString().charAt(0);
 
     for (let index = 1; index <= thisString.length; index++) {
       //相等的話數量++

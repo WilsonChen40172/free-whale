@@ -1,5 +1,5 @@
 //全域方法
-
+// import React from "react";
 //判斷api打位置 true="" false=20
 let productionLink = "";
 
@@ -49,6 +49,22 @@ const GlobalMethod = {
       });
 
     return returnObject;
+  },
+  getRandomRun: (minNum, maxNum) => {
+    return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+  },
+
+  lengthOfLongestSubstring: (s) => {
+    var thisString = Array.from(s);
+    // var returnCounts = 0;
+
+    var result = thisString.filter((item, index, arr) => {
+      return arr.indexOf(item) === index;
+    });
+
+    console.log(result);
+
+    return result.length;
   },
 };
 

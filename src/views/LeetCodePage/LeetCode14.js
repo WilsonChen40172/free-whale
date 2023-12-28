@@ -6,7 +6,7 @@ const LeetCode14 = () => {
   useEffect(() => {
     // 使用瀏覽器 API 更新文件標題
     document.title = "LeetCode14";
-    compare();
+    // compare();
   });
 
   const [inputStringA, setInputStringA] = useState("abcd");
@@ -36,6 +36,7 @@ const LeetCode14 = () => {
         } else {
           firstCount = firstCount.slice(0, indexDataLength - 1);
         }
+        console.log(firstCount);
       }
     }
 
@@ -85,7 +86,9 @@ const LeetCode14 = () => {
         <font className="d-block" size="3">
           Result:<span>{result}</span>
         </font>
-        <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/0"}>Back</Link>
+        <Link className={style.leetCodeTitle} to={"/f2e/LeetCode/0"}>
+          Back
+        </Link>
       </div>
     </div>
   );

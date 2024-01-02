@@ -8,9 +8,12 @@ import {
   headerSwitchChange,
   selectHeaderSwitch,
 } from "../features/counter/counterSlice";
+import axios from "axios";
 
 const Header = () => {
   const [thisRoute, setThisRoute] = useState("");
+  const [employee, setEmployee] = useState([]);
+  const [error, setError] = useState(null);
   // const history = useHistory();
   const location = useLocation();
   // console.log(location);
@@ -22,6 +25,26 @@ const Header = () => {
 
   const headerSwitch = useSelector(selectHeaderSwitch);
   const dispatch = useDispatch();
+  const baseURL = "http://localhost:3000/employee";
+
+  useEffect(() => {
+    // invalid url will trigger an 404 error
+    const getEmployee = async () => {
+      try {
+        const result = await axios.get(baseURL);
+        setEmployee(result.data);
+      } catch (error) {
+        setError(error);
+        if (error) return `Error: ${error.message}`;
+      }
+    };
+    getEmployee();
+    console.log(employee);
+  }, []);
+
+  const listItems = employee.map((employeeData) => (
+    <li key={employeeData["id"]}>{employeeData["name"]}</li>
+  ));
 
   return (
     <section
@@ -76,12 +99,12 @@ const Header = () => {
               className={thisRoute === "/Classic" ? " " : ""}
               onClick={() => dispatch(headerSwitchChange())}
             >
-              {"Test GlobalFun"}
               {/* 測試全域用function */}
-              {/* {GlobalMethod.getRandomRun(100, 300)} */}
+              {GlobalMethod.getRandomRun(100, 300)}
               {/* {GlobalMethod.lengthOfLongestSubstring("pwwkew")} */}
             </Link>
           </li>
+          {/* {listItems} */}
         </ul>
         {/* <select
           name=""

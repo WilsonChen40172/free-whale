@@ -1,0 +1,14 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "name": "json-server",
+      "author": "typicode"
+    }
+  ]
+}

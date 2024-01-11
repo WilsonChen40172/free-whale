@@ -42,7 +42,7 @@ const F2E = () => {
   }, []);
 
   return (
-    <div className={style.F2E+" flex-all-center vh-100"}>
+    <div className={style.F2E + " flex-all-center vh-100"}>
       <div className={style.section} style={{ display: "none" }}>
         <div className="container">
           <div className="text-center">
@@ -71,6 +71,11 @@ const F2E = () => {
       <div className={style.section}>
         <div className="text-center p-4">
           <Link to={"/f2e/AudioEffects"}>Audio Effects</Link>
+        </div>
+      </div>
+      <div className={style.section}>
+        <div className="text-center p-4">
+          <Link to={"/f2e/UseTypeMethod"}>UseTypeMethod</Link>
         </div>
       </div>
       <div className={style.section} style={{ display: "none" }}>

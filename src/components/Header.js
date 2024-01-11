@@ -8,12 +8,13 @@ import {
   headerSwitchChange,
   selectHeaderSwitch,
 } from "../features/counter/counterSlice";
-import axios from "axios";
+// import axios from "axios";
 
 const Header = () => {
   const [thisRoute, setThisRoute] = useState("");
-  const [employee, setEmployee] = useState([]);
-  const [error, setError] = useState(null);
+  // api testing
+  // const [employee, setEmployee] = useState([]);
+  // const [error, setError] = useState(null);
   // const history = useHistory();
   const location = useLocation();
   // console.log(location);
@@ -25,26 +26,26 @@ const Header = () => {
 
   const headerSwitch = useSelector(selectHeaderSwitch);
   const dispatch = useDispatch();
-  const baseURL = "http://localhost:3000/employee";
+  // const baseURL = "http://localhost:3000/employee";
 
   useEffect(() => {
-    // invalid url will trigger an 404 error
-    const getEmployee = async () => {
-      try {
-        const result = await axios.get(baseURL);
-        setEmployee(result.data);
-      } catch (error) {
-        setError(error);
-        if (error) return `Error: ${error.message}`;
-      }
-    };
-    getEmployee();
-    console.log(employee);
+    // api testing
+    // const getEmployee = async () => {
+    //   try {
+    //     const result = await axios.get(baseURL);
+    //     setEmployee(result.data);
+    //   } catch (error) {
+    //     setError(error);
+    //     if (error) return `Error: ${error.message}`;
+    //   }
+    // };
+    // getEmployee();
+    // console.log(employee);
   }, []);
 
-  const listItems = employee.map((employeeData) => (
-    <li key={employeeData["id"]}>{employeeData["name"]}</li>
-  ));
+  // const listItems = employee.map((employeeData) => (
+  //   <p key={employeeData["id"]}>{employeeData["name"]}</p>
+  // ));
 
   return (
     <section
@@ -104,7 +105,6 @@ const Header = () => {
               {/* {GlobalMethod.lengthOfLongestSubstring("pwwkew")} */}
             </Link>
           </li>
-          {/* {listItems} */}
         </ul>
         {/* <select
           name=""

@@ -12,6 +12,7 @@ import Navbar from "../components/Navbar";
 import ReduxExample from "../ReduxExample";
 import AudioEffects from "../views/AudioEffects";
 import Map from "../views/Map";
+import UseTypeMethod from "../views/UseTypeMethod";
 
 function RouteSetting() {
   const [headerSwitch, setHeaderSwitch] = useState(true);
@@ -39,6 +40,7 @@ function RouteSetting() {
         <Route path={"/f2e/Redux"} element={<ReduxExample />} />
         <Route path={"/f2e/AudioEffects"} element={<AudioEffects />} />
         <Route path={"/f2e/Map"} element={<Map />} />
+        <Route path={"/f2e/UseTypeMethod"} element={<UseTypeMethod />} />
       </Routes>
     </HashRouter>
   );

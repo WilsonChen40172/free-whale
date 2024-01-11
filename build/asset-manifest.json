@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.46803895.css",
-    "main.js": "./static/js/main.67d3ce78.js",
+    "main.js": "./static/js/main.2ff866aa.js",
     "static/media/wilson_home_1.JPG": "./static/media/wilson_home_1.0e76ea1675d413dd7070.JPG",
     "index.html": "./index.html",
     "main.46803895.css.map": "./static/css/main.46803895.css.map",
-    "main.67d3ce78.js.map": "./static/js/main.67d3ce78.js.map"
+    "main.2ff866aa.js.map": "./static/js/main.2ff866aa.js.map"
   },
   "entrypoints": [
     "static/css/main.46803895.css",
-    "static/js/main.67d3ce78.js"
+    "static/js/main.2ff866aa.js"
   ]
 }

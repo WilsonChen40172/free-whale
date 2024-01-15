@@ -36,7 +36,7 @@ const SimulateLight = () => {
   };
 
   const compare = (type) => {
-    console.log(type);
+    // console.log(type);
     switch (type) {
       case "callback":
         const simulateLightCallback = () => {
@@ -134,7 +134,7 @@ const SimulateLight = () => {
       </div>
       <div className="text-center">
         <button
-          className={"btn defaultButton mb-3 "+ SimulateLightStyle.button}
+          className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
           onClick={() => {
             compare("callback");
           }}
@@ -142,7 +142,7 @@ const SimulateLight = () => {
           Callback
         </button>
         <button
-          className={"btn defaultButton mb-3 "+ SimulateLightStyle.button}
+          className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
           onClick={() => {
             compare("promise");
           }}
@@ -150,7 +150,7 @@ const SimulateLight = () => {
           Promise
         </button>
         <button
-          className={"btn defaultButton mb-3 "+ SimulateLightStyle.button}
+          className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
           onClick={() => {
             compare("asyncawait");
           }}
@@ -159,13 +159,16 @@ const SimulateLight = () => {
         </button>
       </div>
       <button
-        className={"btn defaultButton mb-3 "+ SimulateLightStyle.button}
+        className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
         onClick={() => {
           let endTid = setTimeout(function () {});
           for (let i = 0; i <= endTid; i++) {
             clearTimeout(i);
-            clearInterval(i);
+            // clearInterval(i);
           }
+          setGreenLight(false);
+          setRedLight(false);
+          setYellowLight(false);
         }}
       >
         Stop

@@ -1,5 +1,5 @@
 import GlobalMethod from "../global/GlobalMethod";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import style from "./Header.module.scss";
 import { useLocation } from "react-router-dom";
@@ -46,6 +46,11 @@ const Header = () => {
   // const listItems = employee.map((employeeData) => (
   //   <p key={employeeData["id"]}>{employeeData["name"]}</p>
   // ));
+
+  // useMemo -> list就不會每次重刷都重新render一次頁面
+  const randomNumUseMemo = useMemo(() => {
+    return <>{GlobalMethod.getRandomRun(100, 300)}</>;
+  }, []);
 
   return (
     <section
@@ -101,8 +106,7 @@ const Header = () => {
               onClick={() => dispatch(headerSwitchChange())}
             >
               {/* 測試全域用function */}
-              {GlobalMethod.getRandomRun(100, 300)}
-              {/* {GlobalMethod.lengthOfLongestSubstring("pwwkew")} */}
+              {randomNumUseMemo}
             </Link>
           </li>
         </ul>

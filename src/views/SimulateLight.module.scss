@@ -1,0 +1,23 @@
+.light {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #aaaaaa;
+  border-radius: 20%;
+}
+
+.light.green.active {
+  background-color: green;
+}
+
+.light.red.active {
+  background-color: red;
+}
+
+.light.yellow.active {
+  background-color: yellow;
+}
+
+.button {
+  width: 100px;
+}

@@ -13,6 +13,7 @@ import ReduxExample from "../ReduxExample";
 import AudioEffects from "../views/AudioEffects";
 import Map from "../views/Map";
 import UseTypeMethod from "../views/UseTypeMethod";
+import SimulateLight from "../views/SimulateLight";
 
 function RouteSetting() {
   const [headerSwitch, setHeaderSwitch] = useState(true);
@@ -41,6 +42,7 @@ function RouteSetting() {
         <Route path={"/f2e/AudioEffects"} element={<AudioEffects />} />
         <Route path={"/f2e/Map"} element={<Map />} />
         <Route path={"/f2e/UseTypeMethod"} element={<UseTypeMethod />} />
+        <Route path={"/f2e/SimulateLight"} element={<SimulateLight />} />
       </Routes>
     </HashRouter>
   );

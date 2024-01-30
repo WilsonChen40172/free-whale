@@ -6,33 +6,30 @@ import style from "./F2E.module.scss";
 const SimulateLight = () => {
   // 使用瀏覽器 API 更新文件標題
   useEffect(() => {
-    document.title = "LeetCode Map";
+    document.title = "SimulateLight";
   }, []);
 
   const [greenLight, setGreenLight] = useState(false);
   const [redLight, setRedLight] = useState(false);
   const [yellowLight, setYellowLight] = useState(false);
+  const [greenMins, setGreenMins] = useState(8000);
+  const [redMins, setRedMins] = useState(3000);
+  const [yellowMins, setYellowMins] = useState(6000);
 
   const green = () => {
-    // console.log("green");
     setGreenLight(true);
     setRedLight(false);
     setYellowLight(false);
-    // console.log(greenLight);
   };
   const red = () => {
-    // console.log("red");
     setGreenLight(false);
     setRedLight(true);
     setYellowLight(false);
-    // console.log(redLight);
   };
   const yellow = () => {
-    // console.log("yellow");
     setGreenLight(false);
     setRedLight(false);
     setYellowLight(true);
-    // console.log(yellowLight);
   };
 
   const compare = (type) => {
@@ -47,9 +44,9 @@ const SimulateLight = () => {
               red();
               setTimeout(() => {
                 simulateLightCallback();
-              }, 6000);
-            }, 3000);
-          }, 8000);
+              }, yellowMins);
+            }, redMins);
+          }, greenMins);
         };
         // 使用 callback 函式啟動
         simulateLightCallback(() => {});
@@ -60,14 +57,14 @@ const SimulateLight = () => {
 
         const trafficLightPromise = () => {
           green();
-          delayTime(8000)
+          delayTime(greenMins)
             .then(() => {
               yellow();
-              return delayTime(3000);
+              return delayTime(redMins);
             })
             .then(() => {
               red();
-              return delayTime(6000);
+              return delayTime(yellowMins);
             })
             .then(() => {
               return trafficLightPromise();
@@ -77,18 +74,18 @@ const SimulateLight = () => {
         // 使用 Promise 函式啟動
         trafficLightPromise();
         break;
-      case "asyncawait":
+      case "async/await":
         const delayTimeAsync = (duration) =>
           new Promise((resolve) => setTimeout(resolve, duration));
 
         const trafficLightAsync = async () => {
           while (true) {
             green();
-            await delayTimeAsync(8000);
+            await delayTimeAsync(greenMins);
             yellow();
-            await delayTimeAsync(3000);
+            await delayTimeAsync(redMins);
             red();
-            await delayTimeAsync(6000);
+            await delayTimeAsync(yellowMins);
           }
         };
 
@@ -98,6 +95,17 @@ const SimulateLight = () => {
       default:
         break;
     }
+  };
+
+  const stopLight = () => {
+    let endTid = setTimeout(function () {});
+    for (let i = 0; i <= endTid; i++) {
+      clearTimeout(i);
+      // clearInterval(i);
+    }
+    setGreenLight(false);
+    setRedLight(false);
+    setYellowLight(false);
   };
 
   return (
@@ -132,7 +140,41 @@ const SimulateLight = () => {
           }
         ></span>
       </div>
-      <div className="text-center">
+
+      <div className={"text-center " + SimulateLightStyle.inputWindowSection}>
+        <label htmlFor="" className={SimulateLightStyle.inputLabel}>
+          Green mins:
+        </label>
+        <input
+          className={"form-control"}
+          type="number"
+          name=""
+          id=""
+          value={greenMins}
+          onChange={(e) => setGreenMins(e.target.value)}
+        />
+        <label htmlFor="" className={SimulateLightStyle.inputLabel}>
+          Yellow mins:
+        </label>
+        <input
+          className={"form-control"}
+          type="number"
+          name=""
+          id=""
+          value={yellowMins}
+          onChange={(e) => setYellowMins(e.target.value)}
+        />
+        <label htmlFor="" className={SimulateLightStyle.inputLabel}>
+          Red mins:
+        </label>
+        <input
+          className={"form-control"}
+          type="number"
+          name=""
+          id=""
+          value={redMins}
+          onChange={(e) => setRedMins(e.target.value)}
+        />
         <button
           className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
           onClick={() => {
@@ -152,27 +194,20 @@ const SimulateLight = () => {
         <button
           className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
           onClick={() => {
-            compare("asyncawait");
+            compare("async/await");
           }}
         >
           Async/Await
         </button>
+        <button
+          className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
+          onClick={() => {
+            stopLight();
+          }}
+        >
+          Stop
+        </button>
       </div>
-      <button
-        className={"btn defaultButton mb-3 " + SimulateLightStyle.button}
-        onClick={() => {
-          let endTid = setTimeout(function () {});
-          for (let i = 0; i <= endTid; i++) {
-            clearTimeout(i);
-            // clearInterval(i);
-          }
-          setGreenLight(false);
-          setRedLight(false);
-          setYellowLight(false);
-        }}
-      >
-        Stop
-      </button>
     </div>
   );
 };

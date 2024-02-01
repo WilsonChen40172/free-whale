@@ -30,7 +30,9 @@ const Map = () => {
     <div className={style.F2E + " flex-all-center vh-100"}>
       {consoleData.map((data) => (
         <div className="text-center" key={data.key}>
-          <p className="p-10">{data.value}</p>
+          <p className="p-10">
+            {data.value}
+          </p>
         </div>
       ))}
       <button className="btn defaultButton mb-3" onClick={compare}>

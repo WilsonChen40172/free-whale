@@ -58,11 +58,11 @@ const F2E = () => {
           <Link to={"/f2e/LeetCode/0"}>LeetCode</Link>
         </div>
       </div>
-      <div className={style.section}>
+      {/* <div className={style.section}>
         <div className="text-center p-4">
           <Link to={"/f2e/Map"}>Map</Link>
         </div>
-      </div>
+      </div> */}
       <div className={style.section} style={{ display: "none" }}>
         <div className="container">
           <Counter />

@@ -33,7 +33,7 @@ const useTypeMethod = () => {
   const list = useMemo(() => {
     console.log("list");
     return <p>{count}</p>;
-  }, []);
+  }, [count]);
 
   const onClick = useCallback(() => {
     console.log("click");

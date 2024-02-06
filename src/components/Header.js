@@ -106,6 +106,7 @@ const Header = () => {
               onClick={() => dispatch(headerSwitchChange())}
             >
               {/* 測試全域用function */}
+              {"UseMemo:"}
               {randomNumUseMemo}
             </Link>
           </li>

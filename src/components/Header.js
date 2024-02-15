@@ -78,8 +78,8 @@ const Header = () => {
               thisRoute === "/F2E"
                 ? style.active
                 : thisRoute === "/LeetCode"
-                ? style.active
-                : ""
+                  ? style.active
+                  : ""
             }
           >
             <Link
@@ -101,12 +101,12 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to={"/Classic"}
-              className={thisRoute === "/Classic" ? " " : ""}
+              to={"/CodeNote"}
+              className={thisRoute === "/CodeNote" ? " " : ""}
               onClick={() => dispatch(headerSwitchChange())}
             >
               {/* 測試全域用function */}
-              {"UseMemo:"}
+              {"CodeNote:"}
               {randomNumUseMemo}
             </Link>
           </li>

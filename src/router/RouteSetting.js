@@ -15,7 +15,7 @@ import Map from "../views/Map";
 import UseTypeMethod from "../views/UseTypeMethod";
 import SimulateLight from "../views/SimulateLight";
 import Classic from "../views/Classic";
-
+import CodeNote from "../views/CodeNote";
 
 function RouteSetting() {
   const [headerSwitch, setHeaderSwitch] = useState(true);
@@ -46,6 +46,7 @@ function RouteSetting() {
         <Route path={"/f2e/UseTypeMethod"} element={<UseTypeMethod />} />
         <Route path={"/f2e/SimulateLight"} element={<SimulateLight />} />
         <Route path={"/Classic"} element={<Classic />} />
+        <Route path={"/CodeNote"} element={<CodeNote />} />
       </Routes>
     </HashRouter>
   );

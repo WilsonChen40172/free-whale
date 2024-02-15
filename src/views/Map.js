@@ -26,6 +26,18 @@ const Map = () => {
     setConsoleData(returnObj);
   };
 
+  // 考[1,2,3[4,5,6]]陣列中值的加總，還有陣列中返回最多長度的字串，以及判斷陣列中是否有重複元素
+  // js考題，多層嵌套的的 array 中有數字或是 array，統計整數加總值
+
+  const [arrayData, setArrayData] = useState([0, 1, 2, [3, 4]]);
+  const [arraySum, setArraySum] = useState(0);
+  const arrayTotal = () => {
+    let thisArray = arrayData.flat(Infinity);
+    const sum = thisArray.reduce((acc, num) => acc + num, 0);
+    setArraySum(sum);
+  }
+  // arrayTotal();
+
   return (
     <div className={style.F2E + " flex-all-center vh-100"}>
       {consoleData.map((data) => (
@@ -35,8 +47,15 @@ const Map = () => {
           </p>
         </div>
       ))}
+
       <button className="btn defaultButton mb-3" onClick={compare}>
         Compare
+      </button>
+      <div className="text-center">
+        <p>{arraySum}</p>
+      </div>
+      <button className="btn defaultButton mb-3" onClick={arrayTotal}>
+        Sum
       </button>
     </div>
   );

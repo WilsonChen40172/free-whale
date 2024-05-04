@@ -1,6 +1,6 @@
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 // import GlobalMethod from "../global/GlobalMethod";
 import Home from "../views/Home";
 import Stock from "../views/Stock";
@@ -27,6 +27,16 @@ function RouteSetting() {
     setHeaderSwitch(!thisSwitchBoolean);
     // console.log(headerSwitch);
   };
+  function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      // 路由變更後立即將頁面滾動到頂部
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+  }
   return (
     <HashRouter>
       <Navbar
@@ -37,6 +47,7 @@ function RouteSetting() {
         changeHeaderSwitch={changeHeaderSwitch}
         headerSwitch={headerSwitch}
       ></Header>
+      <ScrollToTop />
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/stock"} element={<Stock />} />
@@ -53,7 +64,7 @@ function RouteSetting() {
         <Route path={"/Counter"} element={<Counter />} />
         <Route path={"/Traveler"} element={<Traveler />} />
         <Route path={"/Dance"} element={<Dance />} />
-        
+
       </Routes>
     </HashRouter>
   );

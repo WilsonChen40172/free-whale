@@ -16,6 +16,9 @@ import UseTypeMethod from "../views/UseTypeMethod";
 import SimulateLight from "../views/SimulateLight";
 import Classic from "../views/Classic";
 import CodeNote from "../views/CodeNote";
+import Traveler from "../views/Traveler";
+import Dance from "../views/Dance";
+import { Counter } from "../features/counter/Counter";
 
 function RouteSetting() {
   const [headerSwitch, setHeaderSwitch] = useState(true);
@@ -47,6 +50,10 @@ function RouteSetting() {
         <Route path={"/f2e/SimulateLight"} element={<SimulateLight />} />
         <Route path={"/Classic"} element={<Classic />} />
         <Route path={"/CodeNote"} element={<CodeNote />} />
+        <Route path={"/Counter"} element={<Counter />} />
+        <Route path={"/Traveler"} element={<Traveler />} />
+        <Route path={"/Dance"} element={<Dance />} />
+        
       </Routes>
     </HashRouter>
   );

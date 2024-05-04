@@ -68,26 +68,41 @@ const Header = () => {
               Home
             </Link>
           </li>
-          <li className={thisRoute === "/stock" ? style.active : ""}>
-            <Link to={"/stock"} onClick={() => dispatch(headerSwitchChange())}>
-              Stock
+          {/* <li>
+            <Link
+              to={"/CodeNote"}
+              className={thisRoute === "/CodeNote" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
+              {"CodeNote:"}
+              {randomNumUseMemo}
+            </Link>
+          </li> */}
+          <li className={thisRoute === "/Traveler" ? style.active : ""}>
+            <Link
+              to={"/Traveler"}
+              className={thisRoute === "/Traveler" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
+              Traveler Life
             </Link>
           </li>
-          <li
-            className={
-              thisRoute === "/F2E"
-                ? style.active
-                : thisRoute === "/LeetCode"
-                  ? style.active
-                  : ""
-            }
-          >
+          <li className={thisRoute === "/F2E" ? style.active : ""}>
             <Link
               to={"/F2E"}
               className={thisRoute === "/F2E" ? " " : ""}
               onClick={() => dispatch(headerSwitchChange())}
             >
-              F2E
+              F2E Pages
+            </Link>
+          </li>
+          <li className={thisRoute === "/Dance" ? style.active : ""}>
+            <Link
+              to={"/Dance"}
+              className={thisRoute === "/Dance" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
+              About Dance
             </Link>
           </li>
           <li className={thisRoute === "/Classic" ? style.active : ""}>
@@ -99,28 +114,8 @@ const Header = () => {
               Classic
             </Link>
           </li>
-          <li>
-            <Link
-              to={"/CodeNote"}
-              className={thisRoute === "/CodeNote" ? " " : ""}
-              onClick={() => dispatch(headerSwitchChange())}
-            >
-              {/* 測試全域用function */}
-              {"CodeNote:"}
-              {randomNumUseMemo}
-            </Link>
-          </li>
         </ul>
-        {/* <select
-          name=""
-          id=""
-          className={
-            "text-right form-select position-absolute "  + style.languageSelect
-          }
-        >
-          <option value="0">English</option>
-          <option value="1">中文</option>
-        </select> */}
+
       </div>
     </section>
   );

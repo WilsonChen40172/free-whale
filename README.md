@@ -77,6 +77,6 @@ npm run start
 
 ## Node Version
 
-Node vesion -> v18.9.1 (需用nvm更換版本)
+Node version -> v18.9.1 (需用nvm更換版本)
 "node-sass": "^7.0.0" -> "^8.0.0",
 "sass-loader": "^12.6.0" -> "^10.0.4",

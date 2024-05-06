@@ -68,25 +68,7 @@ const Header = () => {
               Home
             </Link>
           </li>
-          {/* <li>
-            <Link
-              to={"/CodeNote"}
-              className={thisRoute === "/CodeNote" ? " " : ""}
-              onClick={() => dispatch(headerSwitchChange())}
-            >
-              {"CodeNote:"}
-              {randomNumUseMemo}
-            </Link>
-          </li> */}
-          <li className={thisRoute === "/Traveler" ? style.active : ""}>
-            <Link
-              to={"/Traveler"}
-              className={thisRoute === "/Traveler" ? " " : ""}
-              onClick={() => dispatch(headerSwitchChange())}
-            >
-              Traveler Life
-            </Link>
-          </li>
+          
           <li className={thisRoute === "/F2E" ? style.active : ""}>
             <Link
               to={"/F2E"}
@@ -94,6 +76,15 @@ const Header = () => {
               onClick={() => dispatch(headerSwitchChange())}
             >
               F2E Pages
+            </Link>
+          </li>
+          <li className={thisRoute === "/Traveler" ? style.active : ""}>
+            <Link
+              to={"/Traveler"}
+              className={thisRoute === "/Traveler" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
+              Traveler Life
             </Link>
           </li>
           <li className={thisRoute === "/Dance" ? style.active : ""}>
@@ -114,8 +105,17 @@ const Header = () => {
               Classic
             </Link>
           </li>
+          <li>
+            <Link
+              to={"/CodeNote"}
+              className={thisRoute === "/CodeNote" ? " " : ""}
+              onClick={() => dispatch(headerSwitchChange())}
+            >
+              {"CodeNote:"}
+              {randomNumUseMemo}
+            </Link>
+          </li>
         </ul>
-
       </div>
     </section>
   );

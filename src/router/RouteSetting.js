@@ -64,7 +64,6 @@ function RouteSetting() {
         <Route path={"/Counter"} element={<Counter />} />
         <Route path={"/Traveler"} element={<Traveler />} />
         <Route path={"/Dance"} element={<Dance />} />
-
       </Routes>
     </HashRouter>
   );

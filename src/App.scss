@@ -227,6 +227,13 @@ p {
   padding: 4em;
 }
 
+.fullPage:nth-child(odd) {
+  background-color: #5e42a6;
+}
+.fullPage:nth-child(even) {
+  background-color: #b74e91;
+}
+
 .defaultButton {
   text-align: center;
   width: 200px;
